@@ -4,10 +4,10 @@ import 'package:meta/meta.dart';
 
 part 'print_state.dart';
 
-class PrintCubit extends Cubit<String> {
-  PrintCubit() : super('');
+class PrintCubit extends Cubit<PrintState> {
+  PrintCubit() : super(const PrintState(text: ''));
 
   void print(String text) {
-    emit(text);
+    emit(state.copyWith(text: text));
   }
 }

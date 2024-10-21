@@ -10,10 +10,10 @@ class PrintView extends StatelessWidget {
     TextEditingController textController = TextEditingController(text: '');
     return Scaffold(
         appBar: AppBar(),
-        body: BlocBuilder<PrintCubit, String>(
+        body: BlocBuilder<PrintCubit, PrintState>(
             builder: (context, state) => Column(
                   children: [
-                    Text(state),
+                    Text(state.text),
                     TextField(
                       controller: textController,
                     ),
