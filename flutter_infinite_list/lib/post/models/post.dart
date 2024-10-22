@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'post.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 final class Post extends Equatable {
   const Post({required this.id, required this.title, required this.body});
   final int id;

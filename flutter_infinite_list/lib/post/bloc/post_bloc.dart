@@ -49,7 +49,6 @@ class PostBloc extends Bloc<PostEvent, PostState> {
     if (response.statusCode == 200) {
       final body = jsonDecode(response.body) as List;
       return body.map((e) {
-        print('fromJson ${Post.fromJson(e)}');
         return Post.fromJson(e);
       }).toList();
     }
