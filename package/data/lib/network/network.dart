@@ -28,9 +28,9 @@ class Network {
       if (response.statusCode == 200) {
         return NetworkResponse.ok(response.data);
       }
-      return NetworkResponse.err(response.statusMessage ?? "Error");
+      return NetworkResponse.err(response.statusMessage ?? "Error.");
     } catch (e) {
-      return NetworkResponse.err(response.statusMessage ?? "Error");
+      return NetworkResponse.err(response.statusMessage ?? "Error.");
     }
   }
 
