@@ -1,23 +1,28 @@
 import 'package:dio/dio.dart';
 
-import 'network_response.model.dart';
+import 'models/network_response.model.dart';
 
 class Network {
-  late String baseUrl;
+  late String _baseUrl;
   static final Network _singleton = Network._();
   Network._();
   factory Network({required String baseUrl}) {
-    _singleton.baseUrl = baseUrl;
+    _singleton._baseUrl = baseUrl;
     return _singleton;
   }
 
-  final headers = {'Content-Type': 'application/json; charset=UTF-8'};
+  final _headers = {'Content-Type': 'application/json; charset=UTF-8'};
 
-  late Dio dio;
+  late Dio _dio;
+
+  static Network get instance {
+    return Network._singleton;
+  }
+
   Dio _createDio() {
-    var options = BaseOptions(baseUrl: _singleton.baseUrl, headers: headers);
-    dio = Dio(options);
-    return dio;
+    var options = BaseOptions(baseUrl: _singleton._baseUrl, headers: _headers);
+    _dio = Dio(options);
+    return _dio;
   }
 
   Future<NetworkResponse> get(String path,
