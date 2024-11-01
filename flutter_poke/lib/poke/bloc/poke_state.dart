@@ -1,6 +1,8 @@
 part of 'poke_bloc.dart';
 
-@immutable
-sealed class PokeState {}
+class PokeState extends Equatable {
+  @override
+  List<Object?> get props => [];
+}
 
 final class PokeInitial extends PokeState {}

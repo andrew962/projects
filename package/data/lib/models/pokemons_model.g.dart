@@ -1,14 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pokemon_response_model.dart';
+part of 'pokemons_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PokemonResponseModelImpl _$$PokemonResponseModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PokemonResponseModelImpl(
+_$PokemonsModelImpl _$$PokemonsModelImplFromJson(Map<String, dynamic> json) =>
+    _$PokemonsModelImpl(
       name: json['name'] as String,
       url: json['url'] as String,
     );

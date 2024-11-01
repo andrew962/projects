@@ -20,9 +20,12 @@ PokemonResponseModel _$PokemonResponseModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PokemonResponseModel {
-  String get name => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
+  int get count => throw _privateConstructorUsedError;
+  int? get next => throw _privateConstructorUsedError;
+  int? get previous => throw _privateConstructorUsedError;
+  List<PokemonsModel> get results => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PokemonResponseModelCopyWith<PokemonResponseModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -34,7 +37,7 @@ abstract class $PokemonResponseModelCopyWith<$Res> {
           $Res Function(PokemonResponseModel) then) =
       _$PokemonResponseModelCopyWithImpl<$Res, PokemonResponseModel>;
   @useResult
-  $Res call({String name, String url});
+  $Res call({int count, int? next, int? previous, List<PokemonsModel> results});
 }
 
 /// @nodoc
@@ -51,18 +54,28 @@ class _$PokemonResponseModelCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? url = null,
+    Object? count = null,
+    Object? next = freezed,
+    Object? previous = freezed,
+    Object? results = null,
   }) {
     return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int,
+      next: freezed == next
+          ? _value.next
+          : next // ignore: cast_nullable_to_non_nullable
+              as int?,
+      previous: freezed == previous
+          ? _value.previous
+          : previous // ignore: cast_nullable_to_non_nullable
+              as int?,
+      results: null == results
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<PokemonsModel>,
     ) as $Val);
   }
 }
@@ -75,7 +88,7 @@ abstract class _$$PokemonResponseModelImplCopyWith<$Res>
       __$$PokemonResponseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String url});
+  $Res call({int count, int? next, int? previous, List<PokemonsModel> results});
 }
 
 /// @nodoc
@@ -89,38 +102,64 @@ class __$$PokemonResponseModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? url = null,
+    Object? count = null,
+    Object? next = freezed,
+    Object? previous = freezed,
+    Object? results = null,
   }) {
     return _then(_$PokemonResponseModelImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int,
+      next: freezed == next
+          ? _value.next
+          : next // ignore: cast_nullable_to_non_nullable
+              as int?,
+      previous: freezed == previous
+          ? _value.previous
+          : previous // ignore: cast_nullable_to_non_nullable
+              as int?,
+      results: null == results
+          ? _value._results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<PokemonsModel>,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable(createToJson: false)
+@JsonSerializable()
 class _$PokemonResponseModelImpl implements _PokemonResponseModel {
-  _$PokemonResponseModelImpl({required this.name, required this.url});
+  _$PokemonResponseModelImpl(
+      {this.count = 0,
+      this.next,
+      this.previous,
+      final List<PokemonsModel> results = const []})
+      : _results = results;
 
   factory _$PokemonResponseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonResponseModelImplFromJson(json);
 
   @override
-  final String name;
+  @JsonKey()
+  final int count;
   @override
-  final String url;
+  final int? next;
+  @override
+  final int? previous;
+  final List<PokemonsModel> _results;
+  @override
+  @JsonKey()
+  List<PokemonsModel> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_results);
+  }
 
   @override
   String toString() {
-    return 'PokemonResponseModel(name: $name, url: $url)';
+    return 'PokemonResponseModel(count: $count, next: $next, previous: $previous, results: $results)';
   }
 
   @override
@@ -128,13 +167,17 @@ class _$PokemonResponseModelImpl implements _PokemonResponseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PokemonResponseModelImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.url, url) || other.url == url));
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.next, next) || other.next == next) &&
+            (identical(other.previous, previous) ||
+                other.previous == previous) &&
+            const DeepCollectionEquality().equals(other._results, _results));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, url);
+  int get hashCode => Object.hash(runtimeType, count, next, previous,
+      const DeepCollectionEquality().hash(_results));
 
   @JsonKey(ignore: true)
   @override
@@ -143,20 +186,33 @@ class _$PokemonResponseModelImpl implements _PokemonResponseModel {
       get copyWith =>
           __$$PokemonResponseModelImplCopyWithImpl<_$PokemonResponseModelImpl>(
               this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PokemonResponseModelImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _PokemonResponseModel implements PokemonResponseModel {
   factory _PokemonResponseModel(
-      {required final String name,
-      required final String url}) = _$PokemonResponseModelImpl;
+      {final int count,
+      final int? next,
+      final int? previous,
+      final List<PokemonsModel> results}) = _$PokemonResponseModelImpl;
 
   factory _PokemonResponseModel.fromJson(Map<String, dynamic> json) =
       _$PokemonResponseModelImpl.fromJson;
 
   @override
-  String get name;
+  int get count;
   @override
-  String get url;
+  int? get next;
+  @override
+  int? get previous;
+  @override
+  List<PokemonsModel> get results;
   @override
   @JsonKey(ignore: true)
   _$$PokemonResponseModelImplCopyWith<_$PokemonResponseModelImpl>
