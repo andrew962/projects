@@ -23,6 +23,7 @@ mixin _$PokemonsModel {
   String get name => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PokemonsModelCopyWith<PokemonsModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -105,7 +106,7 @@ class __$$PokemonsModelImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable(createToJson: false)
+@JsonSerializable()
 class _$PokemonsModelImpl implements _PokemonsModel {
   _$PokemonsModelImpl({required this.name, required this.url});
 
@@ -140,6 +141,13 @@ class _$PokemonsModelImpl implements _PokemonsModel {
   @pragma('vm:prefer-inline')
   _$$PokemonsModelImplCopyWith<_$PokemonsModelImpl> get copyWith =>
       __$$PokemonsModelImplCopyWithImpl<_$PokemonsModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PokemonsModelImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _PokemonsModel implements PokemonsModel {

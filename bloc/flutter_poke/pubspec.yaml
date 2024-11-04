@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   data:
-    path: ../package/data
+    path: ../../package/data
   cupertino_icons: ^1.0.6
   bloc: ^8.1.0
   bloc_concurrency: ^0.2.0

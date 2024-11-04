@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'pokemon_response_model.freezed.dart';
 part 'pokemon_response_model.g.dart';
 
-@Freezed(toJson: true, fromJson: true)
+@Freezed(makeCollectionsUnmodifiable: false)
 class PokemonResponseModel with _$PokemonResponseModel {
   factory PokemonResponseModel(
       {@Default(0) int count,

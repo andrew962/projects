@@ -121,7 +121,7 @@ class __$$PokemonResponseModelImplCopyWithImpl<$Res>
           : previous // ignore: cast_nullable_to_non_nullable
               as int?,
       results: null == results
-          ? _value._results
+          ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as List<PokemonsModel>,
     ));
@@ -132,11 +132,7 @@ class __$$PokemonResponseModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PokemonResponseModelImpl implements _PokemonResponseModel {
   _$PokemonResponseModelImpl(
-      {this.count = 0,
-      this.next,
-      this.previous,
-      final List<PokemonsModel> results = const []})
-      : _results = results;
+      {this.count = 0, this.next, this.previous, this.results = const []});
 
   factory _$PokemonResponseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonResponseModelImplFromJson(json);
@@ -148,14 +144,9 @@ class _$PokemonResponseModelImpl implements _PokemonResponseModel {
   final int? next;
   @override
   final int? previous;
-  final List<PokemonsModel> _results;
   @override
   @JsonKey()
-  List<PokemonsModel> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_results);
-  }
+  final List<PokemonsModel> results;
 
   @override
   String toString() {
@@ -171,13 +162,13 @@ class _$PokemonResponseModelImpl implements _PokemonResponseModel {
             (identical(other.next, next) || other.next == next) &&
             (identical(other.previous, previous) ||
                 other.previous == previous) &&
-            const DeepCollectionEquality().equals(other._results, _results));
+            const DeepCollectionEquality().equals(other.results, results));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, count, next, previous,
-      const DeepCollectionEquality().hash(_results));
+      const DeepCollectionEquality().hash(results));
 
   @JsonKey(ignore: true)
   @override
