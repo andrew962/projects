@@ -108,7 +108,7 @@ class __$$PokemonParamsModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PokemonParamsModelImpl implements _PokemonParamsModel {
-  _$PokemonParamsModelImpl({this.offset = 50, this.limit = 50});
+  _$PokemonParamsModelImpl({this.offset = 0, this.limit = 50});
 
   factory _$PokemonParamsModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonParamsModelImplFromJson(json);

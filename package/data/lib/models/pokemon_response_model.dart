@@ -8,8 +8,8 @@ part 'pokemon_response_model.g.dart';
 class PokemonResponseModel with _$PokemonResponseModel {
   factory PokemonResponseModel(
       {@Default(0) int count,
-      int? next,
-      int? previous,
+      PokemontCountModel? next,
+      PokemontCountModel? previous,
       @Default([]) List<PokemonsModel> results}) = _PokemonResponseModel;
 
   factory PokemonResponseModel.fromJson(Map<String, dynamic> json) =>

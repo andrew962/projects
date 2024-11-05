@@ -9,7 +9,7 @@ part of 'pokemon_params_model.dart';
 _$PokemonParamsModelImpl _$$PokemonParamsModelImplFromJson(
         Map<String, dynamic> json) =>
     _$PokemonParamsModelImpl(
-      offset: (json['offset'] as num?)?.toInt() ?? 50,
+      offset: (json['offset'] as num?)?.toInt() ?? 0,
       limit: (json['limit'] as num?)?.toInt() ?? 50,
     );
 

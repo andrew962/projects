@@ -10,8 +10,13 @@ _$PokemonResponseModelImpl _$$PokemonResponseModelImplFromJson(
         Map<String, dynamic> json) =>
     _$PokemonResponseModelImpl(
       count: (json['count'] as num?)?.toInt() ?? 0,
-      next: (json['next'] as num?)?.toInt(),
-      previous: (json['previous'] as num?)?.toInt(),
+      next: json['next'] == null
+          ? null
+          : PokemontCountModel.fromJson(json['next'] as Map<String, dynamic>),
+      previous: json['previous'] == null
+          ? null
+          : PokemontCountModel.fromJson(
+              json['previous'] as Map<String, dynamic>),
       results: (json['results'] as List<dynamic>?)
               ?.map((e) => PokemonsModel.fromJson(e as Map<String, dynamic>))
               .toList() ??

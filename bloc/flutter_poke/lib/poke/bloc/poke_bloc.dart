@@ -10,7 +10,7 @@ part 'poke_state.dart';
 class PokeBloc extends Bloc<PokeEvent, PokeState> {
   PokeBloc() : super(PokeState()) {
     on<PokeFetched>((event, emit) {
-      print("Init Bloc");
+      // print("Init Bloc");
       _getPokemon(PokemonParamsModel());
     });
   }
@@ -19,6 +19,6 @@ class PokeBloc extends Bloc<PokeEvent, PokeState> {
     PokeRepository pokeRepository = GetIt.instance<PokeRepository>();
     PokemonParamsModel params = PokemonParamsModel(limit: 100, offset: 50);
     var r = await pokeRepository.getPokemon(params);
-    print(r);
+    // print(r);
   }
 }

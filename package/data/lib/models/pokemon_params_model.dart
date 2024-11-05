@@ -5,8 +5,8 @@ part 'pokemon_params_model.g.dart';
 
 @freezed
 class PokemonParamsModel with _$PokemonParamsModel {
-  factory PokemonParamsModel(
-      {@Default(50) int offset, @Default(50) int limit}) = _PokemonParamsModel;
+  factory PokemonParamsModel({@Default(0) int offset, @Default(50) int limit}) =
+      _PokemonParamsModel;
   factory PokemonParamsModel.fromJson(Map<String, dynamic> json) =>
       _$PokemonParamsModelFromJson(json);
 }

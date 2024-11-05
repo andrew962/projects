@@ -17,10 +17,10 @@ class PokeRepository implements Repository {
             .toList();
         PokemontCount pokemontCount = PokemontCount(data: data);
         PokemontCountModel? next = pokemontCount.next();
-        int? previous = pokemontCount.previous();
+        PokemontCountModel? previous = pokemontCount.previous();
         return PokemonResponseModel(
             count: data["count"],
-            // next: next,
+            next: next,
             previous: previous,
             results: results);
       },
@@ -41,20 +41,25 @@ class PokemontCount extends Equatable {
 
   PokemontCountModel next() {
     String? dataNext = data["next"];
-    var next = int.parse(dataNext != null
+    var limit = int.tryParse(dataNext != null
         ? dataNext.substring(dataNext.indexOf("=") + 1, dataNext.indexOf("&"))
         : '0');
-    var previous = int.parse(dataNext != null
+    var offset = int.tryParse(dataNext != null
         ? dataNext.substring(dataNext.indexOf("=") + 1, dataNext.length)
         : '0');
-    return PokemontCountModel(next: next, previous: previous);
+    return PokemontCountModel(limit: limit, offset: offset);
   }
 
-  int previous() {
-    String? dataPrevious = data["next"];
-    return int.parse(dataPrevious != null
+  PokemontCountModel previous() {
+    String? dataPrevious = data["previous"];
+    var limit = int.tryParse(dataPrevious != null
         ? dataPrevious.substring(
-            dataPrevious.indexOf("="), dataPrevious.indexOf("&"))
+            dataPrevious.indexOf("=") + 1, dataPrevious.indexOf("&"))
         : '0');
+    var offset = int.tryParse(dataPrevious != null
+        ? dataPrevious.substring(
+            dataPrevious.indexOf("=") + 1, dataPrevious.length)
+        : '0');
+    return PokemontCountModel(limit: limit, offset: offset);
   }
 }

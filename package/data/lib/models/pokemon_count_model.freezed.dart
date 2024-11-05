@@ -14,10 +14,14 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
+PokemontCountModel _$PokemontCountModelFromJson(Map<String, dynamic> json) {
+  return _PokemontCountModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$PokemontCountModel {
-  int? get next => throw _privateConstructorUsedError;
-  int? get previous => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  int? get offset => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -31,7 +35,7 @@ abstract class $PokemontCountModelCopyWith<$Res> {
           PokemontCountModel value, $Res Function(PokemontCountModel) then) =
       _$PokemontCountModelCopyWithImpl<$Res, PokemontCountModel>;
   @useResult
-  $Res call({int? next, int? previous});
+  $Res call({int? limit, int? offset});
 }
 
 /// @nodoc
@@ -47,17 +51,17 @@ class _$PokemontCountModelCopyWithImpl<$Res, $Val extends PokemontCountModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? next = freezed,
-    Object? previous = freezed,
+    Object? limit = freezed,
+    Object? offset = freezed,
   }) {
     return _then(_value.copyWith(
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      previous: freezed == previous
-          ? _value.previous
-          : previous // ignore: cast_nullable_to_non_nullable
+      offset: freezed == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
               as int?,
     ) as $Val);
   }
@@ -71,7 +75,7 @@ abstract class _$$PokemontCountModelImplCopyWith<$Res>
       __$$PokemontCountModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? next, int? previous});
+  $Res call({int? limit, int? offset});
 }
 
 /// @nodoc
@@ -85,35 +89,38 @@ class __$$PokemontCountModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? next = freezed,
-    Object? previous = freezed,
+    Object? limit = freezed,
+    Object? offset = freezed,
   }) {
     return _then(_$PokemontCountModelImpl(
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      previous: freezed == previous
-          ? _value.previous
-          : previous // ignore: cast_nullable_to_non_nullable
+      offset: freezed == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable(createFactory: false)
+@JsonSerializable()
 class _$PokemontCountModelImpl implements _PokemontCountModel {
-  _$PokemontCountModelImpl({this.next, this.previous});
+  _$PokemontCountModelImpl({this.limit, this.offset});
+
+  factory _$PokemontCountModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PokemontCountModelImplFromJson(json);
 
   @override
-  final int? next;
+  final int? limit;
   @override
-  final int? previous;
+  final int? offset;
 
   @override
   String toString() {
-    return 'PokemontCountModel(next: $next, previous: $previous)';
+    return 'PokemontCountModel(limit: $limit, offset: $offset)';
   }
 
   @override
@@ -121,14 +128,13 @@ class _$PokemontCountModelImpl implements _PokemontCountModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PokemontCountModelImpl &&
-            (identical(other.next, next) || other.next == next) &&
-            (identical(other.previous, previous) ||
-                other.previous == previous));
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.offset, offset) || other.offset == offset));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, next, previous);
+  int get hashCode => Object.hash(runtimeType, limit, offset);
 
   @JsonKey(ignore: true)
   @override
@@ -146,13 +152,16 @@ class _$PokemontCountModelImpl implements _PokemontCountModel {
 }
 
 abstract class _PokemontCountModel implements PokemontCountModel {
-  factory _PokemontCountModel({final int? next, final int? previous}) =
+  factory _PokemontCountModel({final int? limit, final int? offset}) =
       _$PokemontCountModelImpl;
 
+  factory _PokemontCountModel.fromJson(Map<String, dynamic> json) =
+      _$PokemontCountModelImpl.fromJson;
+
   @override
-  int? get next;
+  int? get limit;
   @override
-  int? get previous;
+  int? get offset;
   @override
   @JsonKey(ignore: true)
   _$$PokemontCountModelImplCopyWith<_$PokemontCountModelImpl> get copyWith =>

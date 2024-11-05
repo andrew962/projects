@@ -21,8 +21,8 @@ PokemonResponseModel _$PokemonResponseModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PokemonResponseModel {
   int get count => throw _privateConstructorUsedError;
-  int? get next => throw _privateConstructorUsedError;
-  int? get previous => throw _privateConstructorUsedError;
+  PokemontCountModel? get next => throw _privateConstructorUsedError;
+  PokemontCountModel? get previous => throw _privateConstructorUsedError;
   List<PokemonsModel> get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +37,14 @@ abstract class $PokemonResponseModelCopyWith<$Res> {
           $Res Function(PokemonResponseModel) then) =
       _$PokemonResponseModelCopyWithImpl<$Res, PokemonResponseModel>;
   @useResult
-  $Res call({int count, int? next, int? previous, List<PokemonsModel> results});
+  $Res call(
+      {int count,
+      PokemontCountModel? next,
+      PokemontCountModel? previous,
+      List<PokemonsModel> results});
+
+  $PokemontCountModelCopyWith<$Res>? get next;
+  $PokemontCountModelCopyWith<$Res>? get previous;
 }
 
 /// @nodoc
@@ -67,16 +74,40 @@ class _$PokemonResponseModelCopyWithImpl<$Res,
       next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as PokemontCountModel?,
       previous: freezed == previous
           ? _value.previous
           : previous // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as PokemontCountModel?,
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as List<PokemonsModel>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PokemontCountModelCopyWith<$Res>? get next {
+    if (_value.next == null) {
+      return null;
+    }
+
+    return $PokemontCountModelCopyWith<$Res>(_value.next!, (value) {
+      return _then(_value.copyWith(next: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PokemontCountModelCopyWith<$Res>? get previous {
+    if (_value.previous == null) {
+      return null;
+    }
+
+    return $PokemontCountModelCopyWith<$Res>(_value.previous!, (value) {
+      return _then(_value.copyWith(previous: value) as $Val);
+    });
   }
 }
 
@@ -88,7 +119,16 @@ abstract class _$$PokemonResponseModelImplCopyWith<$Res>
       __$$PokemonResponseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int count, int? next, int? previous, List<PokemonsModel> results});
+  $Res call(
+      {int count,
+      PokemontCountModel? next,
+      PokemontCountModel? previous,
+      List<PokemonsModel> results});
+
+  @override
+  $PokemontCountModelCopyWith<$Res>? get next;
+  @override
+  $PokemontCountModelCopyWith<$Res>? get previous;
 }
 
 /// @nodoc
@@ -115,11 +155,11 @@ class __$$PokemonResponseModelImplCopyWithImpl<$Res>
       next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as PokemontCountModel?,
       previous: freezed == previous
           ? _value.previous
           : previous // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as PokemontCountModel?,
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
@@ -141,9 +181,9 @@ class _$PokemonResponseModelImpl implements _PokemonResponseModel {
   @JsonKey()
   final int count;
   @override
-  final int? next;
+  final PokemontCountModel? next;
   @override
-  final int? previous;
+  final PokemontCountModel? previous;
   @override
   @JsonKey()
   final List<PokemonsModel> results;
@@ -189,8 +229,8 @@ class _$PokemonResponseModelImpl implements _PokemonResponseModel {
 abstract class _PokemonResponseModel implements PokemonResponseModel {
   factory _PokemonResponseModel(
       {final int count,
-      final int? next,
-      final int? previous,
+      final PokemontCountModel? next,
+      final PokemontCountModel? previous,
       final List<PokemonsModel> results}) = _$PokemonResponseModelImpl;
 
   factory _PokemonResponseModel.fromJson(Map<String, dynamic> json) =
@@ -199,9 +239,9 @@ abstract class _PokemonResponseModel implements PokemonResponseModel {
   @override
   int get count;
   @override
-  int? get next;
+  PokemontCountModel? get next;
   @override
-  int? get previous;
+  PokemontCountModel? get previous;
   @override
   List<PokemonsModel> get results;
   @override
