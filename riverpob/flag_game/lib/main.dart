@@ -26,6 +26,14 @@ class App extends ConsumerWidget {
       routerConfig: appRouter,
       builder: (context, route) => Scaffold(
         appBar: AppBar(
+            automaticallyImplyLeading: true,
+            // leading: IconButton(
+            //   icon: const Icon(Icons.arrow_back, color: Colors.black),
+            //   onPressed: () {
+            //     if (!ref.read(appRouterProvider).canPop()) return;
+            //     ref.read(appRouterProvider).pop();
+            //   },
+            // ),
             backgroundColor: Colors.greenAccent,
             title: const Center(child: Text("Flag Game"))),
         body: route,
