@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:flag_game/providers/providers.dart';
@@ -11,50 +13,93 @@ class NewGamePage extends ConsumerStatefulWidget {
 }
 
 class _NewGamePageState extends ConsumerState<NewGamePage> {
+  bool disableButtons = false;
+  bool loadingImg = false;
+
   @override
   void initState() {
     super.initState();
-    ref.read(newGameProvider);
   }
 
   @override
   Widget build(BuildContext context) {
-    final newGame = ref.watch(newGameProvider);
-    // final newGameData = ref.watch(newGameDataProvider);
-    return newGame.when(
-      data: (data) {
-        print(data.gameId);
-        print(data.toJson());
-        return Column(
-          children: [
-            Text(
-              data.country.countryName,
-              style: const TextStyle(fontSize: 24),
-            ),
-            Text(
-              data.gameId,
-            ),
-            Image.network(data.country.urlImage!),
-            Expanded(
-              child: ListView.builder(
-                itemBuilder: (context, i) {
-                  var answer = data.answers[i];
-                  return ElevatedButton(
-                      style: const ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.white54)),
-                      onPressed: () {
-                        print(answer.id);
-                      },
-                      child: Text(answer.countryName));
-                },
-                itemCount: data.answers.length,
-              ),
-            )
-          ],
-        );
+    final newGameP = ref.watch(newGameProvider);
+    return newGameP.when(
+      data: (dataG) {
+        final newQuestionP = ref.watch(newQuestionProvider(dataG.item!.gameId));
+        if (newQuestionP.hasValue) {
+          return newQuestionP.maybeWhen(
+            data: (dataQ) {
+              // loadingImg = false;
+              return Container(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 310,
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: Image.network(
+                          dataQ.item!.country.urlImage!,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                          itemCount: dataQ.item!.answers.length,
+                          itemBuilder: (context, index) {
+                            var answer = dataQ.item!.answers[index];
+                            return ElevatedButton(
+                                onPressed: disableButtons
+                                    ? null
+                                    : () async {
+                                        loadingImg = true;
+                                        setState(() {
+                                          disableButtons = true;
+                                        });
+                                        String msg = "Incorrecto era";
+                                        if (answer.id ==
+                                            dataQ.item!.correctAnswer) {
+                                          msg = "Correcto";
+                                        }
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              '$msg ${dataQ.item?.country.countryName}.',
+                                              style:
+                                                  const TextStyle(fontSize: 20),
+                                            ),
+                                            duration:
+                                                const Duration(seconds: 3),
+                                          ),
+                                        );
+                                        await Future.delayed(
+                                            const Duration(milliseconds: 3500));
+                                        ref.invalidate(newQuestionProvider);
+                                        await Future.delayed(
+                                            const Duration(seconds: 1));
+                                        setState(() {
+                                          disableButtons = false;
+                                        });
+                                      },
+                                child: Text(answer.countryName));
+                          }),
+                    )
+                  ],
+                ),
+              );
+            },
+            orElse: () {
+              return const Text('Error Question');
+            },
+          );
+        }
+        return const Center(child: CircularProgressIndicator());
       },
-      error: (error, stackTrace) => const Text("Error"),
+      error: (error, stackTrace) => const Center(
+        child: Text("Error Game"),
+      ),
       loading: () => const Center(child: CircularProgressIndicator()),
     );
   }

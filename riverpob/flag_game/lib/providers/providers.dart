@@ -1,1 +1,1 @@
-export 'new_game_providers.dart';
+export 'game_providers.dart';
