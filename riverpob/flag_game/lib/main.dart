@@ -1,4 +1,5 @@
 import 'package:flag_game/dependecies.dart';
+// import 'package:flag_game/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,20 +26,8 @@ class App extends ConsumerWidget {
       title: 'Flag Game',
       routerConfig: appRouter,
       builder: (context, route) => Scaffold(
-        appBar: AppBar(
-            automaticallyImplyLeading: true,
-            // leading: IconButton(
-            //   icon: const Icon(Icons.arrow_back, color: Colors.black),
-            //   onPressed: () {
-            //     if (!ref.read(appRouterProvider).canPop()) return;
-            //     ref.read(appRouterProvider).pop();
-            //   },
-            // ),
-            backgroundColor: Colors.greenAccent,
-            title: const Center(child: Text("Flag Game"))),
         body: route,
       ),
-      // home: Scaffold(body: SafeArea(child: HomePage())),
     );
   }
 }

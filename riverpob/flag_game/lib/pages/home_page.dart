@@ -1,3 +1,4 @@
+// import 'package:flag_game/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -12,8 +13,7 @@ class HomePage extends ConsumerWidget {
     return Center(
         child: ElevatedButton(
             onPressed: () {
-              context.go('/new-game');
-              // ref.read(appRouterProvider).push('/new-game');
+              context.push('/new-game');
             },
             child: const Text("Juego Nuevo")));
   }
