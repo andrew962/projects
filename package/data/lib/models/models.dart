@@ -8,5 +8,6 @@ export 'flag/new_game_response_model.dart';
 export 'flag/country_item_model.dart';
 export 'flag/question_response_model.dart';
 export 'flag/question_params_model.dart';
+export 'flag/game_deleted_model.dart';
 
 export 'api/api_response_model.dart';

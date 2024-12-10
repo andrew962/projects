@@ -7,21 +7,23 @@ class FlagGameRepository implements Repository {
   @override
   Network network = GetIt.instance<Network>();
 
-  Future<NewGameResponseModel> newGame() async {
+  Future<NewGameItemResponseModel> newGame() async {
     var r = await network.post('/new-game');
     return r.maybeWhen(
         ok: (data) {
-          var newGame = NewGameResponseModel.fromJson(data);
-          return newGame;
+          // var newGame = NewGameResponseModel.fromJson(data);
+          ApiResponseModel<NewGameItemResponseModel> r =
+              ApiResponseModel<NewGameItemResponseModel>.fromJson(
+                  data,
+                  (json) => NewGameItemResponseModel.fromJson(
+                      json as Map<String, dynamic>));
+          return r.item!;
         },
-        err: (err) =>
-            NewGameResponseModel(message: 'Bad Request', success: false),
-        orElse: () =>
-            NewGameResponseModel(message: 'Server Error', success: false));
+        err: (err) => NewGameItemResponseModel(),
+        orElse: () => NewGameItemResponseModel());
   }
 
-  Future<ApiResponseModel<QuestionResponseModel>> newQuestion(
-      QuestionParamsModel params) async {
+  Future<QuestionResponseModel> newQuestion(QuestionParamsModel params) async {
     var response =
         await network.get('/new-question', queryParameters: params.toJson());
     return response.maybeWhen(
@@ -31,10 +33,35 @@ class FlagGameRepository implements Repository {
                 data,
                 (json) => QuestionResponseModel.fromJson(
                     json as Map<String, dynamic>));
-        return r;
+        return r.item!;
       },
-      err: (err) => ApiResponseModel(message: 'Bad Request', success: false),
-      orElse: () => ApiResponseModel(message: 'Server Error', success: false),
+      err: (err) => QuestionResponseModel(
+          answers: [],
+          correctAnswer: '',
+          country: CountryItemModel(countryName: '', urlImage: '', id: ''),
+          gameId: '',
+          questionId: ''),
+      orElse: () => QuestionResponseModel(
+          answers: [],
+          correctAnswer: '',
+          country: CountryItemModel(countryName: '', urlImage: '', id: ''),
+          gameId: '',
+          questionId: ''),
     );
+  }
+
+  Future<bool> deleteGame(QuestionParamsModel params) async {
+    var r = await network.delete('/delete-game');
+    return r.maybeWhen(
+        ok: (data) {
+          ApiResponseModel<GameDeletedModel> r =
+              ApiResponseModel<GameDeletedModel>.fromJson(
+                  data,
+                  (json) =>
+                      GameDeletedModel.fromJson(json as Map<String, dynamic>));
+          return r.success;
+        },
+        err: (err) => false,
+        orElse: () => false);
   }
 }

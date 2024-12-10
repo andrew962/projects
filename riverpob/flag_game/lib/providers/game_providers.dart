@@ -2,30 +2,33 @@ import 'package:data/data.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get_it/get_it.dart';
 
-// class GameNotifier extends StateNotifier<NewGameResponseModel> {
-//   GameNotifier() : super(NewGameResponseModel());
-//   newGame() async {
-//     final pokeRepository = GetIt.instance<FlagGameRepository>();
-//     state = await pokeRepository.newGame();
-//   }
-// }
+class GameNotifier extends StateNotifier<NewGameItemResponseModel> {
+  GameNotifier() : super(NewGameItemResponseModel());
+  void currentGame(NewGameItemResponseModel game) async {
+    state = game;
+  }
 
-// final gameProvider =
-//     StateNotifierProvider<GameNotifier, NewGameResponseModel>((ref) {
-//   return GameNotifier();
-// });
+  void decrementLives() {
+    state = state.copyWith(lives: state.lives - 1);
+  }
+}
 
 final gameProvider =
-    FutureProvider.autoDispose<NewGameResponseModel>((ref) async {
+    StateNotifierProvider<GameNotifier, NewGameItemResponseModel>((ref) {
+  return GameNotifier();
+});
+
+final gameFutureProvider =
+    FutureProvider.autoDispose<NewGameItemResponseModel>((ref) async {
   return newGame();
 });
 
-final newQuestionProvider =
+final newQuestionFutureProvider =
     FutureProvider.family<QuestionResponseModel, String>((ref, gameId) async {
   return newQuestion(gameId);
 });
 
-final deleteGameProvider =
+final deleteGameFutureProvider =
     FutureProvider.family<bool, String>((ref, gameId) async {
   return deleteGame(gameId);
 });
@@ -34,7 +37,7 @@ final gameStateProvider = StateProvider<NewGameResponseModel>((ref) {
   return NewGameResponseModel();
 });
 
-Future<NewGameResponseModel> newGame() async {
+Future<NewGameItemResponseModel> newGame() async {
   final pokeRepository = GetIt.instance<FlagGameRepository>();
   return await pokeRepository.newGame();
 }

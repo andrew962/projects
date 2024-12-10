@@ -8,8 +8,12 @@ import 'config/routes/route.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await dotenv.load(fileName: 'env/.env');
+  const config = String.fromEnvironment('config');
+  String fileName = '.env';
+  if (config.isNotEmpty) {
+    fileName = '$fileName.$config';
+  }
+  await dotenv.load(fileName: 'env/$fileName');
 
   dependecies();
 

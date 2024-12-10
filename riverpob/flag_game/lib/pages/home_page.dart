@@ -12,9 +12,14 @@ class HomePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Center(
         child: ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.grey[300])),
             onPressed: () {
               context.push('/new-game');
             },
-            child: const Text("Juego Nuevo")));
+            child: const Text(
+              "Juego Nuevo",
+              style: TextStyle(color: Colors.black),
+            )));
   }
 }
