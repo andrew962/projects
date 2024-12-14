@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flag_game/providers/providers.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class NewGamePage extends ConsumerStatefulWidget {
   const NewGamePage({super.key});
@@ -15,15 +16,28 @@ class NewGamePage extends ConsumerStatefulWidget {
 class _NewGamePageState extends ConsumerState<NewGamePage> {
   bool disableButtons = false;
   bool loadingImg = false;
-  int goodAnswers = 0;
+  int bestScoreLocal = 0;
+  int bestScoreGlobal = 0;
 
   @override
   void initState() {
     super.initState();
   }
 
+  Future<SharedPreferences> sharedPreferences() async {
+    return await SharedPreferences.getInstance();
+  }
+
   void gameOver() {
     context.pop();
+  }
+
+  Future<void> setBestScore() async {
+    final prefs = await sharedPreferences();
+    var score = prefs.getInt('bestScore') ?? 0;
+    if (bestScoreLocal > score) {
+      prefs.setInt('bestScore', bestScoreLocal);
+    }
   }
 
   @override
@@ -31,10 +45,15 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
     final newGameFutureP = ref.watch(gameFutureProvider);
     final gameStateP = ref.watch(gameProvider);
 
-    ref.listen(gameFutureProvider, (previous, next) {
+    ref.listen(gameFutureProvider, (previous, next) async {
       if (next is AsyncData) {
         ref.read(gameProvider.notifier).currentGame(next.value!);
       }
+      final prefs = await sharedPreferences();
+      var score = prefs.getInt("bestScore") ?? 0;
+      setState(() {
+        bestScoreGlobal = score;
+      });
     });
 
     return Scaffold(
@@ -67,36 +86,33 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                             padding: const EdgeInsets.only(bottom: 10),
                             child: Row(
                               children: [
-                                // Expanded(
-                                //   child: Row(
-                                //     mainAxisAlignment: MainAxisAlignment.start,
-                                //     crossAxisAlignment:
-                                //         CrossAxisAlignment.center,
-                                //     children: [
-                                //       Text(
-                                //         'Racha: $goodAnswers',
-                                //         style: const TextStyle(fontSize: 40),
-                                //       ),
-                                //     ],
-                                //   ),
-                                // ),
                                 Expanded(
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
                                     children: [
-                                      const FaIcon(
-                                        FontAwesomeIcons.solidHeart,
-                                        color: Colors.red,
-                                        size: 40,
-                                      ),
                                       Text(
-                                        ' ${gameStateP.lives}',
-                                        style: const TextStyle(fontSize: 40),
+                                        'Mejor puntaje $bestScoreLocal ${bestScoreLocal > bestScoreGlobal ? "" : "/ $bestScoreGlobal"}',
+                                        style: const TextStyle(fontSize: 30),
                                       ),
                                     ],
                                   ),
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    const FaIcon(
+                                      FontAwesomeIcons.solidHeart,
+                                      color: Colors.red,
+                                      size: 30,
+                                    ),
+                                    Text(
+                                      ' ${gameStateP.lives}',
+                                      style: const TextStyle(fontSize: 30),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
@@ -147,8 +163,16 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                                                       isGameOver =
                                                           gameStateP.lives - 1 <
                                                               1;
+                                                    } else {
+                                                      setState(() {
+                                                        bestScoreLocal =
+                                                            bestScoreLocal + 1;
+                                                      });
                                                     }
                                                     debugPrint('$isGameOver');
+                                                    if (isGameOver) {
+                                                      setBestScore();
+                                                    }
                                                     showModalBottomSheet(
                                                       useSafeArea: true,
                                                       isDismissible: false,
@@ -228,7 +252,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                                                                           style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.green)),
                                                                           onPressed: () {
                                                                             if (isGameOver) {
-                                                                              context.go('/');
+                                                                              context.replace('/');
                                                                             } else {
                                                                               ref.invalidate(newQuestionFutureProvider);
                                                                             }
@@ -243,6 +267,26 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                                                                             style:
                                                                                 const TextStyle(color: Colors.white),
                                                                           )),
+                                                                    ),
+                                                                    const SizedBox(
+                                                                        width:
+                                                                            10),
+                                                                    Visibility(
+                                                                      visible:
+                                                                          isGameOver,
+                                                                      child:
+                                                                          Expanded(
+                                                                        child: ElevatedButton(
+                                                                            style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.green)),
+                                                                            onPressed: () {
+                                                                              ref.invalidate(gameFutureProvider);
+                                                                              context.pop();
+                                                                            },
+                                                                            child: const Text(
+                                                                              'Reintentar',
+                                                                              style: TextStyle(color: Colors.white),
+                                                                            )),
+                                                                      ),
                                                                     )
                                                                   ],
                                                                 ),
