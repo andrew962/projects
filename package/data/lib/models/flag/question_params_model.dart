@@ -8,7 +8,7 @@ part 'question_params_model.g.dart';
 @freezed
 class QuestionParamsModel with _$QuestionParamsModel {
   factory QuestionParamsModel(
-          {@JsonKey(name: "game_id") required String gameId}) =
+          {@JsonKey(name: "excludeIDs") List<String>? excludeIDs}) =
       _QuestionParamsModel;
   factory QuestionParamsModel.fromJson(Map<String, dynamic> json) =>
       _$QuestionParamsModelFromJson(json);

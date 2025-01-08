@@ -9,9 +9,9 @@ part of 'country_item_model.dart';
 _$CountryItemModelImpl _$$CountryItemModelImplFromJson(
         Map<String, dynamic> json) =>
     _$CountryItemModelImpl(
-      urlImage: json['url_image'] as String?,
-      id: json['id'] as String,
-      countryName: json['country_name'] as String,
+      urlImage: json['url_image'] as String? ?? '',
+      id: json['id'] as String? ?? '',
+      countryName: json['country_name'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$CountryItemModelImplToJson(

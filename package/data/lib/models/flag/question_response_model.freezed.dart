@@ -21,16 +21,10 @@ QuestionResponseModel _$QuestionResponseModelFromJson(
 
 /// @nodoc
 mixin _$QuestionResponseModel {
-  @JsonKey(name: "game_id")
-  String get gameId => throw _privateConstructorUsedError;
-  @JsonKey(name: "question_id")
-  String get questionId => throw _privateConstructorUsedError;
-  @JsonKey(name: "country")
-  CountryItemModel get country => throw _privateConstructorUsedError;
   @JsonKey(name: "correct_answer")
-  String get correctAnswer => throw _privateConstructorUsedError;
-  @JsonKey(name: "answers")
-  List<CountryItemModel> get answers => throw _privateConstructorUsedError;
+  CountryItemModel? get correctAnswer => throw _privateConstructorUsedError;
+  @JsonKey(name: "questions")
+  List<CountryItemModel>? get questions => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,13 +39,10 @@ abstract class $QuestionResponseModelCopyWith<$Res> {
       _$QuestionResponseModelCopyWithImpl<$Res, QuestionResponseModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: "game_id") String gameId,
-      @JsonKey(name: "question_id") String questionId,
-      @JsonKey(name: "country") CountryItemModel country,
-      @JsonKey(name: "correct_answer") String correctAnswer,
-      @JsonKey(name: "answers") List<CountryItemModel> answers});
+      {@JsonKey(name: "correct_answer") CountryItemModel? correctAnswer,
+      @JsonKey(name: "questions") List<CountryItemModel>? questions});
 
-  $CountryItemModelCopyWith<$Res> get country;
+  $CountryItemModelCopyWith<$Res>? get correctAnswer;
 }
 
 /// @nodoc
@@ -68,41 +59,30 @@ class _$QuestionResponseModelCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gameId = null,
-    Object? questionId = null,
-    Object? country = null,
-    Object? correctAnswer = null,
-    Object? answers = null,
+    Object? correctAnswer = freezed,
+    Object? questions = freezed,
   }) {
     return _then(_value.copyWith(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
-      questionId: null == questionId
-          ? _value.questionId
-          : questionId // ignore: cast_nullable_to_non_nullable
-              as String,
-      country: null == country
-          ? _value.country
-          : country // ignore: cast_nullable_to_non_nullable
-              as CountryItemModel,
-      correctAnswer: null == correctAnswer
+      correctAnswer: freezed == correctAnswer
           ? _value.correctAnswer
           : correctAnswer // ignore: cast_nullable_to_non_nullable
-              as String,
-      answers: null == answers
-          ? _value.answers
-          : answers // ignore: cast_nullable_to_non_nullable
-              as List<CountryItemModel>,
+              as CountryItemModel?,
+      questions: freezed == questions
+          ? _value.questions
+          : questions // ignore: cast_nullable_to_non_nullable
+              as List<CountryItemModel>?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CountryItemModelCopyWith<$Res> get country {
-    return $CountryItemModelCopyWith<$Res>(_value.country, (value) {
-      return _then(_value.copyWith(country: value) as $Val);
+  $CountryItemModelCopyWith<$Res>? get correctAnswer {
+    if (_value.correctAnswer == null) {
+      return null;
+    }
+
+    return $CountryItemModelCopyWith<$Res>(_value.correctAnswer!, (value) {
+      return _then(_value.copyWith(correctAnswer: value) as $Val);
     });
   }
 }
@@ -117,14 +97,11 @@ abstract class _$$QuestionResponseModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "game_id") String gameId,
-      @JsonKey(name: "question_id") String questionId,
-      @JsonKey(name: "country") CountryItemModel country,
-      @JsonKey(name: "correct_answer") String correctAnswer,
-      @JsonKey(name: "answers") List<CountryItemModel> answers});
+      {@JsonKey(name: "correct_answer") CountryItemModel? correctAnswer,
+      @JsonKey(name: "questions") List<CountryItemModel>? questions});
 
   @override
-  $CountryItemModelCopyWith<$Res> get country;
+  $CountryItemModelCopyWith<$Res>? get correctAnswer;
 }
 
 /// @nodoc
@@ -139,33 +116,18 @@ class __$$QuestionResponseModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gameId = null,
-    Object? questionId = null,
-    Object? country = null,
-    Object? correctAnswer = null,
-    Object? answers = null,
+    Object? correctAnswer = freezed,
+    Object? questions = freezed,
   }) {
     return _then(_$QuestionResponseModelImpl(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
-      questionId: null == questionId
-          ? _value.questionId
-          : questionId // ignore: cast_nullable_to_non_nullable
-              as String,
-      country: null == country
-          ? _value.country
-          : country // ignore: cast_nullable_to_non_nullable
-              as CountryItemModel,
-      correctAnswer: null == correctAnswer
+      correctAnswer: freezed == correctAnswer
           ? _value.correctAnswer
           : correctAnswer // ignore: cast_nullable_to_non_nullable
-              as String,
-      answers: null == answers
-          ? _value._answers
-          : answers // ignore: cast_nullable_to_non_nullable
-              as List<CountryItemModel>,
+              as CountryItemModel?,
+      questions: freezed == questions
+          ? _value._questions
+          : questions // ignore: cast_nullable_to_non_nullable
+              as List<CountryItemModel>?,
     ));
   }
 }
@@ -174,40 +136,30 @@ class __$$QuestionResponseModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$QuestionResponseModelImpl implements _QuestionResponseModel {
   _$QuestionResponseModelImpl(
-      {@JsonKey(name: "game_id") required this.gameId,
-      @JsonKey(name: "question_id") required this.questionId,
-      @JsonKey(name: "country") required this.country,
-      @JsonKey(name: "correct_answer") required this.correctAnswer,
-      @JsonKey(name: "answers") required final List<CountryItemModel> answers})
-      : _answers = answers;
+      {@JsonKey(name: "correct_answer") this.correctAnswer,
+      @JsonKey(name: "questions") final List<CountryItemModel>? questions})
+      : _questions = questions;
 
   factory _$QuestionResponseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$QuestionResponseModelImplFromJson(json);
 
   @override
-  @JsonKey(name: "game_id")
-  final String gameId;
-  @override
-  @JsonKey(name: "question_id")
-  final String questionId;
-  @override
-  @JsonKey(name: "country")
-  final CountryItemModel country;
-  @override
   @JsonKey(name: "correct_answer")
-  final String correctAnswer;
-  final List<CountryItemModel> _answers;
+  final CountryItemModel? correctAnswer;
+  final List<CountryItemModel>? _questions;
   @override
-  @JsonKey(name: "answers")
-  List<CountryItemModel> get answers {
-    if (_answers is EqualUnmodifiableListView) return _answers;
+  @JsonKey(name: "questions")
+  List<CountryItemModel>? get questions {
+    final value = _questions;
+    if (value == null) return null;
+    if (_questions is EqualUnmodifiableListView) return _questions;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_answers);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
   String toString() {
-    return 'QuestionResponseModel(gameId: $gameId, questionId: $questionId, country: $country, correctAnswer: $correctAnswer, answers: $answers)';
+    return 'QuestionResponseModel(correctAnswer: $correctAnswer, questions: $questions)';
   }
 
   @override
@@ -215,19 +167,16 @@ class _$QuestionResponseModelImpl implements _QuestionResponseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$QuestionResponseModelImpl &&
-            (identical(other.gameId, gameId) || other.gameId == gameId) &&
-            (identical(other.questionId, questionId) ||
-                other.questionId == questionId) &&
-            (identical(other.country, country) || other.country == country) &&
             (identical(other.correctAnswer, correctAnswer) ||
                 other.correctAnswer == correctAnswer) &&
-            const DeepCollectionEquality().equals(other._answers, _answers));
+            const DeepCollectionEquality()
+                .equals(other._questions, _questions));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, gameId, questionId, country,
-      correctAnswer, const DeepCollectionEquality().hash(_answers));
+  int get hashCode => Object.hash(runtimeType, correctAnswer,
+      const DeepCollectionEquality().hash(_questions));
 
   @JsonKey(ignore: true)
   @override
@@ -246,32 +195,19 @@ class _$QuestionResponseModelImpl implements _QuestionResponseModel {
 
 abstract class _QuestionResponseModel implements QuestionResponseModel {
   factory _QuestionResponseModel(
-          {@JsonKey(name: "game_id") required final String gameId,
-          @JsonKey(name: "question_id") required final String questionId,
-          @JsonKey(name: "country") required final CountryItemModel country,
-          @JsonKey(name: "correct_answer") required final String correctAnswer,
-          @JsonKey(name: "answers")
-          required final List<CountryItemModel> answers}) =
-      _$QuestionResponseModelImpl;
+      {@JsonKey(name: "correct_answer") final CountryItemModel? correctAnswer,
+      @JsonKey(name: "questions")
+      final List<CountryItemModel>? questions}) = _$QuestionResponseModelImpl;
 
   factory _QuestionResponseModel.fromJson(Map<String, dynamic> json) =
       _$QuestionResponseModelImpl.fromJson;
 
   @override
-  @JsonKey(name: "game_id")
-  String get gameId;
-  @override
-  @JsonKey(name: "question_id")
-  String get questionId;
-  @override
-  @JsonKey(name: "country")
-  CountryItemModel get country;
-  @override
   @JsonKey(name: "correct_answer")
-  String get correctAnswer;
+  CountryItemModel? get correctAnswer;
   @override
-  @JsonKey(name: "answers")
-  List<CountryItemModel> get answers;
+  @JsonKey(name: "questions")
+  List<CountryItemModel>? get questions;
   @override
   @JsonKey(ignore: true)
   _$$QuestionResponseModelImplCopyWith<_$QuestionResponseModelImpl>

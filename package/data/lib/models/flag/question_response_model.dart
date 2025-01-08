@@ -9,11 +9,8 @@ part 'question_response_model.g.dart';
 @freezed
 class QuestionResponseModel with _$QuestionResponseModel {
   factory QuestionResponseModel({
-    @JsonKey(name: "game_id") required String gameId,
-    @JsonKey(name: "question_id") required String questionId,
-    @JsonKey(name: "country") required CountryItemModel country,
-    @JsonKey(name: "correct_answer") required String correctAnswer,
-    @JsonKey(name: "answers") required List<CountryItemModel> answers,
+    @JsonKey(name: "correct_answer") CountryItemModel? correctAnswer,
+    @JsonKey(name: "questions") List<CountryItemModel>? questions,
   }) = _QuestionResponseModel;
   factory QuestionResponseModel.fromJson(Map<String, dynamic> json) =>
       _$QuestionResponseModelFromJson(json);

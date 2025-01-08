@@ -21,7 +21,7 @@ CountryItemModel _$CountryItemModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CountryItemModel {
   @JsonKey(name: "url_image")
-  String? get urlImage => throw _privateConstructorUsedError;
+  String get urlImage => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: "country_name")
   String get countryName => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ abstract class $CountryItemModelCopyWith<$Res> {
       _$CountryItemModelCopyWithImpl<$Res, CountryItemModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: "url_image") String? urlImage,
+      {@JsonKey(name: "url_image") String urlImage,
       String id,
       @JsonKey(name: "country_name") String countryName});
 }
@@ -57,15 +57,15 @@ class _$CountryItemModelCopyWithImpl<$Res, $Val extends CountryItemModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? urlImage = freezed,
+    Object? urlImage = null,
     Object? id = null,
     Object? countryName = null,
   }) {
     return _then(_value.copyWith(
-      urlImage: freezed == urlImage
+      urlImage: null == urlImage
           ? _value.urlImage
           : urlImage // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -87,7 +87,7 @@ abstract class _$$CountryItemModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "url_image") String? urlImage,
+      {@JsonKey(name: "url_image") String urlImage,
       String id,
       @JsonKey(name: "country_name") String countryName});
 }
@@ -103,15 +103,15 @@ class __$$CountryItemModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? urlImage = freezed,
+    Object? urlImage = null,
     Object? id = null,
     Object? countryName = null,
   }) {
     return _then(_$CountryItemModelImpl(
-      urlImage: freezed == urlImage
+      urlImage: null == urlImage
           ? _value.urlImage
           : urlImage // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -128,17 +128,18 @@ class __$$CountryItemModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CountryItemModelImpl implements _CountryItemModel {
   _$CountryItemModelImpl(
-      {@JsonKey(name: "url_image") this.urlImage,
-      required this.id,
-      @JsonKey(name: "country_name") required this.countryName});
+      {@JsonKey(name: "url_image") this.urlImage = '',
+      this.id = '',
+      @JsonKey(name: "country_name") this.countryName = ''});
 
   factory _$CountryItemModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CountryItemModelImplFromJson(json);
 
   @override
   @JsonKey(name: "url_image")
-  final String? urlImage;
+  final String urlImage;
   @override
+  @JsonKey()
   final String id;
   @override
   @JsonKey(name: "country_name")
@@ -182,9 +183,9 @@ class _$CountryItemModelImpl implements _CountryItemModel {
 
 abstract class _CountryItemModel implements CountryItemModel {
   factory _CountryItemModel(
-          {@JsonKey(name: "url_image") final String? urlImage,
-          required final String id,
-          @JsonKey(name: "country_name") required final String countryName}) =
+          {@JsonKey(name: "url_image") final String urlImage,
+          final String id,
+          @JsonKey(name: "country_name") final String countryName}) =
       _$CountryItemModelImpl;
 
   factory _CountryItemModel.fromJson(Map<String, dynamic> json) =
@@ -192,7 +193,7 @@ abstract class _CountryItemModel implements CountryItemModel {
 
   @override
   @JsonKey(name: "url_image")
-  String? get urlImage;
+  String get urlImage;
   @override
   String get id;
   @override

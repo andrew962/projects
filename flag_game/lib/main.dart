@@ -29,6 +29,7 @@ class App extends ConsumerWidget {
     return MaterialApp.router(
       title: 'Flag Game',
       routerConfig: appRouter,
+      restorationScopeId: 'app',
       builder: (context, route) => Scaffold(
         body: route,
       ),

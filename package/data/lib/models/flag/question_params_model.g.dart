@@ -9,11 +9,13 @@ part of 'question_params_model.dart';
 _$QuestionParamsModelImpl _$$QuestionParamsModelImplFromJson(
         Map<String, dynamic> json) =>
     _$QuestionParamsModelImpl(
-      gameId: json['game_id'] as String,
+      excludeIDs: (json['excludeIDs'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
     );
 
 Map<String, dynamic> _$$QuestionParamsModelImplToJson(
         _$QuestionParamsModelImpl instance) =>
     <String, dynamic>{
-      'game_id': instance.gameId,
+      'excludeIDs': instance.excludeIDs,
     };

@@ -20,8 +20,8 @@ QuestionParamsModel _$QuestionParamsModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$QuestionParamsModel {
-  @JsonKey(name: "game_id")
-  String get gameId => throw _privateConstructorUsedError;
+  @JsonKey(name: "excludeIDs")
+  List<String>? get excludeIDs => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $QuestionParamsModelCopyWith<$Res> {
           QuestionParamsModel value, $Res Function(QuestionParamsModel) then) =
       _$QuestionParamsModelCopyWithImpl<$Res, QuestionParamsModel>;
   @useResult
-  $Res call({@JsonKey(name: "game_id") String gameId});
+  $Res call({@JsonKey(name: "excludeIDs") List<String>? excludeIDs});
 }
 
 /// @nodoc
@@ -51,13 +51,13 @@ class _$QuestionParamsModelCopyWithImpl<$Res, $Val extends QuestionParamsModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gameId = null,
+    Object? excludeIDs = freezed,
   }) {
     return _then(_value.copyWith(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
+      excludeIDs: freezed == excludeIDs
+          ? _value.excludeIDs
+          : excludeIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ) as $Val);
   }
 }
@@ -70,7 +70,7 @@ abstract class _$$QuestionParamsModelImplCopyWith<$Res>
       __$$QuestionParamsModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: "game_id") String gameId});
+  $Res call({@JsonKey(name: "excludeIDs") List<String>? excludeIDs});
 }
 
 /// @nodoc
@@ -84,13 +84,13 @@ class __$$QuestionParamsModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gameId = null,
+    Object? excludeIDs = freezed,
   }) {
     return _then(_$QuestionParamsModelImpl(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
+      excludeIDs: freezed == excludeIDs
+          ? _value._excludeIDs
+          : excludeIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -98,18 +98,27 @@ class __$$QuestionParamsModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$QuestionParamsModelImpl implements _QuestionParamsModel {
-  _$QuestionParamsModelImpl({@JsonKey(name: "game_id") required this.gameId});
+  _$QuestionParamsModelImpl(
+      {@JsonKey(name: "excludeIDs") final List<String>? excludeIDs})
+      : _excludeIDs = excludeIDs;
 
   factory _$QuestionParamsModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$QuestionParamsModelImplFromJson(json);
 
+  final List<String>? _excludeIDs;
   @override
-  @JsonKey(name: "game_id")
-  final String gameId;
+  @JsonKey(name: "excludeIDs")
+  List<String>? get excludeIDs {
+    final value = _excludeIDs;
+    if (value == null) return null;
+    if (_excludeIDs is EqualUnmodifiableListView) return _excludeIDs;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'QuestionParamsModel(gameId: $gameId)';
+    return 'QuestionParamsModel(excludeIDs: $excludeIDs)';
   }
 
   @override
@@ -117,12 +126,14 @@ class _$QuestionParamsModelImpl implements _QuestionParamsModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$QuestionParamsModelImpl &&
-            (identical(other.gameId, gameId) || other.gameId == gameId));
+            const DeepCollectionEquality()
+                .equals(other._excludeIDs, _excludeIDs));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, gameId);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_excludeIDs));
 
   @JsonKey(ignore: true)
   @override
@@ -141,15 +152,15 @@ class _$QuestionParamsModelImpl implements _QuestionParamsModel {
 
 abstract class _QuestionParamsModel implements QuestionParamsModel {
   factory _QuestionParamsModel(
-          {@JsonKey(name: "game_id") required final String gameId}) =
+          {@JsonKey(name: "excludeIDs") final List<String>? excludeIDs}) =
       _$QuestionParamsModelImpl;
 
   factory _QuestionParamsModel.fromJson(Map<String, dynamic> json) =
       _$QuestionParamsModelImpl.fromJson;
 
   @override
-  @JsonKey(name: "game_id")
-  String get gameId;
+  @JsonKey(name: "excludeIDs")
+  List<String>? get excludeIDs;
   @override
   @JsonKey(ignore: true)
   _$$QuestionParamsModelImplCopyWith<_$QuestionParamsModelImpl> get copyWith =>

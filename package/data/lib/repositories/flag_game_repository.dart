@@ -35,18 +35,8 @@ class FlagGameRepository implements Repository {
                     json as Map<String, dynamic>));
         return r.item!;
       },
-      err: (err) => QuestionResponseModel(
-          answers: [],
-          correctAnswer: '',
-          country: CountryItemModel(countryName: '', urlImage: '', id: ''),
-          gameId: '',
-          questionId: ''),
-      orElse: () => QuestionResponseModel(
-          answers: [],
-          correctAnswer: '',
-          country: CountryItemModel(countryName: '', urlImage: '', id: ''),
-          gameId: '',
-          questionId: ''),
+      err: (err) => QuestionResponseModel(),
+      orElse: () => QuestionResponseModel(),
     );
   }
 

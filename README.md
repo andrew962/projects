@@ -8,3 +8,7 @@ La idea es escribir codigo e ir leyendo la [documentacion](https://bloclibrary.d
 # No es copiar y pegar, para luego entender.
 
 # flutter pub run build_runner watch --delete-conflicting-outputs
+
+- Generate APK 
+
+flutter build apk --dart-define=config=staging
