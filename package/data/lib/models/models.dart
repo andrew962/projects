@@ -5,8 +5,8 @@ export 'pokemon/pokemon_count_model.dart';
 
 export 'flag/new_game_item_response_model.dart';
 export 'flag/new_game_response_model.dart';
-export 'flag/country_item_model.dart';
-export 'flag/question_response_model.dart';
+export 'flag/flag_item_model.dart';
+export 'flag/question_model.dart';
 export 'flag/question_params_model.dart';
 export 'flag/game_deleted_model.dart';
 

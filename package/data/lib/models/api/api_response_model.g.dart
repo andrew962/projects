@@ -11,11 +11,8 @@ _$ApiResponseModelImpl<T> _$$ApiResponseModelImplFromJson<T>(
   T Function(Object? json) fromJsonT,
 ) =>
     _$ApiResponseModelImpl<T>(
-      message: json['message'] as String,
-      success: json['success'] as bool,
-      item: _$nullableGenericFromJson(json['item'], fromJsonT),
-      items: (json['items'] as List<dynamic>?)?.map(fromJsonT).toList(),
-      count: (json['count'] as num?)?.toInt(),
+      items: (json['items'] as List<dynamic>?)?.map(fromJsonT).toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$ApiResponseModelImplToJson<T>(
@@ -23,21 +20,5 @@ Map<String, dynamic> _$$ApiResponseModelImplToJson<T>(
   Object? Function(T value) toJsonT,
 ) =>
     <String, dynamic>{
-      'message': instance.message,
-      'success': instance.success,
-      'item': _$nullableGenericToJson(instance.item, toJsonT),
-      'items': instance.items?.map(toJsonT).toList(),
-      'count': instance.count,
+      'items': instance.items.map(toJsonT).toList(),
     };
-
-T? _$nullableGenericFromJson<T>(
-  Object? input,
-  T Function(Object? json) fromJson,
-) =>
-    input == null ? null : fromJson(input);
-
-Object? _$nullableGenericToJson<T>(
-  T? input,
-  Object? Function(T value) toJson,
-) =>
-    input == null ? null : toJson(input);

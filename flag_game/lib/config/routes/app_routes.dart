@@ -18,6 +18,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'new-game',
             builder: (context, state) => const NewGamePage(),
+          ),
+          GoRoute(
+            path: 'settings',
+            builder: (context, state) => const SettingsPage(),
           )
         ],
       ),

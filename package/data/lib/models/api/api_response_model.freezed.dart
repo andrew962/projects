@@ -21,11 +21,7 @@ ApiResponseModel<T> _$ApiResponseModelFromJson<T>(
 
 /// @nodoc
 mixin _$ApiResponseModel<T> {
-  String get message => throw _privateConstructorUsedError;
-  bool get success => throw _privateConstructorUsedError;
-  T? get item => throw _privateConstructorUsedError;
-  List<T>? get items => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
+  List<T> get items => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson(Object? Function(T) toJsonT) =>
       throw _privateConstructorUsedError;
@@ -40,8 +36,7 @@ abstract class $ApiResponseModelCopyWith<T, $Res> {
           ApiResponseModel<T> value, $Res Function(ApiResponseModel<T>) then) =
       _$ApiResponseModelCopyWithImpl<T, $Res, ApiResponseModel<T>>;
   @useResult
-  $Res call(
-      {String message, bool success, T? item, List<T>? items, int? count});
+  $Res call({List<T> items});
 }
 
 /// @nodoc
@@ -57,33 +52,13 @@ class _$ApiResponseModelCopyWithImpl<T, $Res, $Val extends ApiResponseModel<T>>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
-    Object? success = null,
-    Object? item = freezed,
-    Object? items = freezed,
-    Object? count = freezed,
+    Object? items = null,
   }) {
     return _then(_value.copyWith(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-      item: freezed == item
-          ? _value.item
-          : item // ignore: cast_nullable_to_non_nullable
-              as T?,
-      items: freezed == items
+      items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
-              as List<T>?,
-      count: freezed == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as List<T>,
     ) as $Val);
   }
 }
@@ -96,8 +71,7 @@ abstract class _$$ApiResponseModelImplCopyWith<T, $Res>
       __$$ApiResponseModelImplCopyWithImpl<T, $Res>;
   @override
   @useResult
-  $Res call(
-      {String message, bool success, T? item, List<T>? items, int? count});
+  $Res call({List<T> items});
 }
 
 /// @nodoc
@@ -111,33 +85,13 @@ class __$$ApiResponseModelImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
-    Object? success = null,
-    Object? item = freezed,
-    Object? items = freezed,
-    Object? count = freezed,
+    Object? items = null,
   }) {
     return _then(_$ApiResponseModelImpl<T>(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-      item: freezed == item
-          ? _value.item
-          : item // ignore: cast_nullable_to_non_nullable
-              as T?,
-      items: freezed == items
+      items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
-              as List<T>?,
-      count: freezed == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as List<T>,
     ));
   }
 }
@@ -145,40 +99,24 @@ class __$$ApiResponseModelImplCopyWithImpl<T, $Res>
 /// @nodoc
 @JsonSerializable(genericArgumentFactories: true)
 class _$ApiResponseModelImpl<T> implements _ApiResponseModel<T> {
-  _$ApiResponseModelImpl(
-      {required this.message,
-      required this.success,
-      this.item,
-      final List<T>? items,
-      this.count})
-      : _items = items;
+  _$ApiResponseModelImpl({final List<T> items = const []}) : _items = items;
 
   factory _$ApiResponseModelImpl.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
       _$$ApiResponseModelImplFromJson(json, fromJsonT);
 
+  final List<T> _items;
   @override
-  final String message;
-  @override
-  final bool success;
-  @override
-  final T? item;
-  final List<T>? _items;
-  @override
-  List<T>? get items {
-    final value = _items;
-    if (value == null) return null;
+  @JsonKey()
+  List<T> get items {
     if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_items);
   }
 
   @override
-  final int? count;
-
-  @override
   String toString() {
-    return 'ApiResponseModel<$T>(message: $message, success: $success, item: $item, items: $items, count: $count)';
+    return 'ApiResponseModel<$T>(items: $items)';
   }
 
   @override
@@ -186,22 +124,13 @@ class _$ApiResponseModelImpl<T> implements _ApiResponseModel<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ApiResponseModelImpl<T> &&
-            (identical(other.message, message) || other.message == message) &&
-            (identical(other.success, success) || other.success == success) &&
-            const DeepCollectionEquality().equals(other.item, item) &&
-            const DeepCollectionEquality().equals(other._items, _items) &&
-            (identical(other.count, count) || other.count == count));
+            const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      message,
-      success,
-      const DeepCollectionEquality().hash(item),
-      const DeepCollectionEquality().hash(_items),
-      count);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
@@ -217,27 +146,14 @@ class _$ApiResponseModelImpl<T> implements _ApiResponseModel<T> {
 }
 
 abstract class _ApiResponseModel<T> implements ApiResponseModel<T> {
-  factory _ApiResponseModel(
-      {required final String message,
-      required final bool success,
-      final T? item,
-      final List<T>? items,
-      final int? count}) = _$ApiResponseModelImpl<T>;
+  factory _ApiResponseModel({final List<T> items}) = _$ApiResponseModelImpl<T>;
 
   factory _ApiResponseModel.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =
       _$ApiResponseModelImpl<T>.fromJson;
 
   @override
-  String get message;
-  @override
-  bool get success;
-  @override
-  T? get item;
-  @override
-  List<T>? get items;
-  @override
-  int? get count;
+  List<T> get items;
   @override
   @JsonKey(ignore: true)
   _$$ApiResponseModelImplCopyWith<T, _$ApiResponseModelImpl<T>> get copyWith =>

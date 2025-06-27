@@ -1,57 +1,40 @@
-import 'package:data/models/models.dart';
-import 'package:data/network/network.dart';
-import 'package:data/repositories/repository.dart';
+import 'dart:convert';
+import 'dart:math';
+
+import 'package:data/data.dart';
 import 'package:get_it/get_it.dart';
 
-class FlagGameRepository implements Repository {
-  @override
-  Network network = GetIt.instance<Network>();
+class FlagGameRepository {
+  ReadJson readJson = GetIt.instance<ReadJson>();
+  final List<int> jsonFlagsCount = List.generate(184, (index) => index + 1);
 
-  Future<NewGameItemResponseModel> newGame() async {
-    var r = await network.post('/new-game');
-    return r.maybeWhen(
-        ok: (data) {
-          // var newGame = NewGameResponseModel.fromJson(data);
-          ApiResponseModel<NewGameItemResponseModel> r =
-              ApiResponseModel<NewGameItemResponseModel>.fromJson(
-                  data,
-                  (json) => NewGameItemResponseModel.fromJson(
-                      json as Map<String, dynamic>));
-          return r.item!;
-        },
-        err: (err) => NewGameItemResponseModel(),
-        orElse: () => NewGameItemResponseModel());
+  // List<int> get jsonFlagsCount => _jsonFlagsCount;
+
+  Future<QuestionModel> newQuestion() async {
+    var flags = await getRandomFlags();
+    var flag = await getRandomFlag(flags);
+    return QuestionModel(options: flags, correctAnswer: flag);
   }
 
-  Future<QuestionResponseModel> newQuestion(QuestionParamsModel params) async {
-    var response =
-        await network.get('/new-question', queryParameters: params.toJson());
-    return response.maybeWhen(
-      ok: (data) {
-        ApiResponseModel<QuestionResponseModel> r =
-            ApiResponseModel<QuestionResponseModel>.fromJson(
-                data,
-                (json) => QuestionResponseModel.fromJson(
-                    json as Map<String, dynamic>));
-        return r.item!;
-      },
-      err: (err) => QuestionResponseModel(),
-      orElse: () => QuestionResponseModel(),
-    );
+  Future<List<FlagItemModel>> getFlags() async {
+    String flagsEncode = await readJson.loadString(cache: true);
+    var flagsDecode = jsonDecode(flagsEncode);
+    return ApiResponseModel.fromJson(flagsDecode,
+        (json) => FlagItemModel.fromJson(json as Map<String, dynamic>)).items;
   }
 
-  Future<bool> deleteGame(QuestionParamsModel params) async {
-    var r = await network.delete('/delete-game');
-    return r.maybeWhen(
-        ok: (data) {
-          ApiResponseModel<GameDeletedModel> r =
-              ApiResponseModel<GameDeletedModel>.fromJson(
-                  data,
-                  (json) =>
-                      GameDeletedModel.fromJson(json as Map<String, dynamic>));
-          return r.success;
-        },
-        err: (err) => false,
-        orElse: () => false);
+  Future<FlagItemModel> getRandomFlag(List<FlagItemModel> flags) async {
+    flags.shuffle();
+    return flags[Random().nextInt(3)];
+  }
+
+  Future<List<FlagItemModel>> getRandomFlags() async {
+    List<FlagItemModel> randomFlags = [];
+    List<FlagItemModel> flags = await getFlags();
+    jsonFlagsCount.shuffle();
+    for (var i in jsonFlagsCount.take(3).toList()) {
+      randomFlags.add(flags[i > 0 ? i - 1 : i]);
+    }
+    return randomFlags;
   }
 }

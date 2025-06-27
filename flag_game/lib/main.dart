@@ -31,7 +31,7 @@ class App extends ConsumerWidget {
       routerConfig: appRouter,
       restorationScopeId: 'app',
       builder: (context, route) => Scaffold(
-        body: route,
+        body: SafeArea(child: route!),
       ),
     );
   }
