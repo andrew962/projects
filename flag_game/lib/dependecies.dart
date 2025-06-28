@@ -4,10 +4,12 @@ import 'package:get_it/get_it.dart';
 
 var getIt = GetIt.instance;
 
-dependecies() {
+void dependecies() {
   getIt.registerLazySingleton<Network>(
-      () => Network(baseUrl: dotenv.get('BASE_URL')));
+    () => Network(baseUrl: dotenv.get('BASE_URL')),
+  );
   getIt.registerLazySingleton<ReadJson>(
-      () => ReadJson(path: dotenv.get('PATH_FLAGS_JSON')));
+    () => ReadJson(path: dotenv.get('PATH_FLAGS_JSON')),
+  );
   getIt.registerLazySingleton<FlagGameRepository>(() => FlagGameRepository());
 }

@@ -3,11 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PreCacheQuestionNotifier extends StateNotifier<QuestionModel> {
   PreCacheQuestionNotifier()
-      : super(QuestionModel(correctAnswer: FlagItemModel()));
-  question(QuestionModel question) => state = question;
+    : super(QuestionModel(correctAnswer: FlagItemModel()));
+  void question(QuestionModel question) => state = question;
 }
 
 final preCacheQuestionProvider =
     StateNotifierProvider<PreCacheQuestionNotifier, QuestionModel>((ref) {
-  return PreCacheQuestionNotifier();
-});
+      return PreCacheQuestionNotifier();
+    });

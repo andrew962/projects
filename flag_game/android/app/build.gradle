@@ -2,6 +2,8 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
+    // id "com.google.gms.google-services"
+    // id "com.google.firebase.crashlytics"
 }
 
 def localProperties = new Properties()
@@ -20,6 +22,16 @@ if (flutterVersionCode == null) {
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
     flutterVersionName = '1.0'
+}
+
+def flutterTargetSdk = localProperties.getProperty('flutter.targetSdkVersion')
+if (flutterTargetSdk == null) {
+    flutterTargetSdk = '34'
+}
+
+def flutterMinSdk = localProperties.getProperty('flutter.minSdkVersion')
+if (flutterMinSdk == null) {
+    flutterMinSdk = '30'
 }
 
 android {

@@ -1,11 +1,8 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:data/data.dart';
 import 'package:flag_game/widgets/animated_button.widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -68,9 +65,9 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
     });
   }
 
-  void _gameOver() {
-    context.pop();
-  }
+  // void _gameOver() {
+  //   context.pop();
+  // }
 
   void _newQuestion() async {
     QuestionModel newQuestion = await gameService.newQuestion();
@@ -81,8 +78,11 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
     _controller.start();
   }
 
-  void _validateAnswer(selectedID,
-      {bool isTimeout = false, bool showCorrectAnswer = false}) async {
+  void _validateAnswer(
+    int selectedID, {
+    bool isTimeout = false,
+    bool showCorrectAnswer = false,
+  }) async {
     setState(() {
       enabledOptions = false;
       hasTimedOut = isTimeout;
@@ -92,21 +92,25 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
       }
 
       question = question.copyWith(
-          options: question.options.map((element) {
-        if ((selectedID == element.id) ||
-            (showCorrectAnswer && question.correctAnswer.id == element.id)) {
-          if (!hasTimedOut) {
-            gameService.deleteFlagID(selectedID);
-          }
-          return element.copyWith(
+        options: question.options.map((element) {
+          if ((selectedID == element.id) ||
+              (showCorrectAnswer && question.correctAnswer.id == element.id)) {
+            if (!hasTimedOut) {
+              gameService.deleteFlagID(selectedID);
+            }
+            return element.copyWith(
               showBadge: true,
               isCorrect: showCorrectAnswer
                   ? question.correctAnswer.id == element.id
-                  : question.correctAnswer.id == selectedID);
-        }
-        return element.copyWith(
-            showBadge: isTimeout ? true : false, isCorrect: false);
-      }).toList());
+                  : question.correctAnswer.id == selectedID,
+            );
+          }
+          return element.copyWith(
+            showBadge: isTimeout ? true : false,
+            isCorrect: false,
+          );
+        }).toList(),
+      );
     });
 
     // await showModalBottomSheet(
@@ -143,13 +147,13 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
 
   // _reset() {}
 
-  Future<void> _setBestScore() async {
-    final prefs = await sharedPreferences();
-    var score = prefs.getInt('bestScore') ?? 0;
-    if (bestScoreLocal > score) {
-      prefs.setInt('bestScore', bestScoreLocal);
-    }
-  }
+  // Future<void> _setBestScore() async {
+  //   final prefs = await sharedPreferences();
+  //   var score = prefs.getInt('bestScore') ?? 0;
+  //   if (bestScoreLocal > score) {
+  //     prefs.setInt('bestScore', bestScoreLocal);
+  //   }
+  // }
 
   Future<void> _getBestScore() async {
     final prefs = await sharedPreferences();
@@ -201,10 +205,12 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                             controller: _controller,
                             width: 50,
                             height: 50,
-                            ringColor:
-                                hasTimedOut ? backgroundColor : Colors.white,
-                            fillColor:
-                                hasTimedOut ? backgroundColor : Colors.grey,
+                            ringColor: hasTimedOut
+                                ? backgroundColor
+                                : Colors.white,
+                            fillColor: hasTimedOut
+                                ? backgroundColor
+                                : Colors.grey,
                             backgroundColor: Colors.transparent,
                             strokeWidth: 5.0,
                             textStyle: GoogleFonts.bubblerOne(
@@ -218,25 +224,29 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                             isTimerTextShown: true,
                             autoStart: false,
                             onComplete: () {
-                              _validateAnswer(question.correctAnswer.id,
-                                  isTimeout: true);
+                              _validateAnswer(
+                                question.correctAnswer.id,
+                                isTimeout: true,
+                              );
                             },
                           ),
                           Visibility(
-                              visible: hasTimedOut,
-                              child: Container(
-                                color: backgroundColor,
-                                height: 50,
-                                child: Center(
-                                  child: Text(
-                                    'Tiempo Fuera',
-                                    style: GoogleFonts.bubblerOne(
-                                        fontSize: 30,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
+                            visible: hasTimedOut,
+                            child: Container(
+                              color: backgroundColor,
+                              height: 50,
+                              child: Center(
+                                child: Text(
+                                  'Tiempo Fuera',
+                                  style: GoogleFonts.bubblerOne(
+                                    fontSize: 30,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                              ))
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       // Row(
@@ -278,47 +288,55 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                   ),
                   const SizedBox(height: 40),
                   Column(
-                      children: question.options.map((flag) {
-                    return Padding(
-                      padding: const EdgeInsets.only(bottom: 10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          badges.Badge(
-                            position:
-                                badges.BadgePosition.topEnd(top: -5, end: -5),
-                            badgeAnimation:
-                                const badges.BadgeAnimation.rotation(),
-                            showBadge: flag.showBadge,
-                            badgeStyle: badges.BadgeStyle(
-                              shape: badges.BadgeShape.square,
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(8)),
-                              badgeColor: flag.isCorrect
-                                  ? Colors.green[800]!
-                                  : Colors.red[800]!,
+                    children: question.options.map((flag) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            badges.Badge(
+                              position: badges.BadgePosition.topEnd(
+                                top: -5,
+                                end: -5,
+                              ),
+                              badgeAnimation:
+                                  const badges.BadgeAnimation.rotation(),
+                              showBadge: flag.showBadge,
+                              badgeStyle: badges.BadgeStyle(
+                                shape: badges.BadgeShape.square,
+                                borderRadius: const BorderRadius.all(
+                                  Radius.circular(8),
+                                ),
+                                badgeColor: flag.isCorrect
+                                    ? Colors.green[800]!
+                                    : Colors.red[800]!,
+                              ),
+                              badgeContent: flag.showBadge
+                                  ? Icon(
+                                      flag.isCorrect
+                                          ? Icons.check
+                                          : Icons.close,
+                                      color: Colors.white,
+                                      size: 25,
+                                    )
+                                  : null,
+                              child: AnimatedButtonWidget(
+                                onPressed: () => hasTimedOut || !enabledOptions
+                                    ? null
+                                    : _validateAnswer(
+                                        flag.id,
+                                        showCorrectAnswer: true,
+                                      ),
+                                color: colors[6],
+                                label: flag.countryName,
+                              ),
                             ),
-                            badgeContent: flag.showBadge
-                                ? Icon(
-                                    flag.isCorrect ? Icons.check : Icons.close,
-                                    color: Colors.white,
-                                    size: 25,
-                                  )
-                                : null,
-                            child: AnimatedButtonWidget(
-                              onPressed: () => hasTimedOut || !enabledOptions
-                                  ? null
-                                  : _validateAnswer(flag.id,
-                                      showCorrectAnswer: true),
-                              color: colors[6],
-                              label: flag.countryName,
-                            ),
-                          )
-                        ],
-                      ),
-                    );
-                  }).toList())
+                          ],
+                        ),
+                      );
+                    }).toList(),
+                  ),
                 ],
               ),
             ),
@@ -328,28 +346,29 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
             child: Positioned(
               bottom: 30,
               child: SizedBox(
-                  // height: 100,
-                  width: MediaQuery.of(context).size.width,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      AnimatedButtonWidget(
-                        onPressed: () {
-                          _newQuestion();
-                          setState(() {
-                            enabledOptions = true;
-                            hasTimedOut = false;
-                            showNextQuestionButton = false;
-                          });
-                          // Navigator.of(context).pop(true);
-                        },
-                        label: 'Siguiente',
-                        color: colors[2],
-                      )
-                    ],
-                  )),
+                // height: 100,
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AnimatedButtonWidget(
+                      onPressed: () {
+                        _newQuestion();
+                        setState(() {
+                          enabledOptions = true;
+                          hasTimedOut = false;
+                          showNextQuestionButton = false;
+                        });
+                        // Navigator.of(context).pop(true);
+                      },
+                      label: 'Siguiente',
+                      color: colors[2],
+                    ),
+                  ],
+                ),
+              ),
             ),
-          )
+          ),
         ],
       ),
     );
