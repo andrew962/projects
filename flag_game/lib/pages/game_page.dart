@@ -8,7 +8,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:badges/badges.dart' as badges;
 
-import '../../services/services.dart';
+import '../services/services.dart';
 
 class NewGamePage extends StatefulHookConsumerWidget {
   const NewGamePage({super.key});

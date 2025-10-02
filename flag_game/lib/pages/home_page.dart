@@ -1,7 +1,7 @@
 import 'package:animated_button/animated_button.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flag_game/widgets/animated_button.widget.dart';
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
@@ -29,15 +29,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   void soundTap() async {
-    try {
-      if (playerPopUp.state != PlayerState.playing) {
-        await playerPopUp.play(AssetSource('sounds/pop_up.mp3'));
-      }
-    } catch (e) {
-      if (kDebugMode) {
-        print('Play sound error $e');
-      }
-    }
+    // try {
+    //   if (playerPopUp.state != PlayerState.playing) {
+    //     await playerPopUp.play(AssetSource('sounds/pop_up.mp3'));
+    //   }
+    // } catch (e) {
+    //   if (kDebugMode) {
+    //     print('Play sound error $e');
+    //   }
+    // }
   }
 
   @override
@@ -87,6 +87,7 @@ class _HomePageState extends State<HomePage> {
                   color: const Color(0xFFB5EAD7),
                   onPressed: () {
                     soundTap();
+                    context.replace('/settings');
                   },
                 ),
 
