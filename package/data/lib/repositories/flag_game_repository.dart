@@ -8,7 +8,10 @@ class FlagGameRepository {
   ReadJson readJson = GetIt.instance<ReadJson>();
   final List<int> jsonFlagsCount = List.generate(184, (index) => index + 1);
 
-  // List<int> get jsonFlagsCount => _jsonFlagsCount;
+  void resetFlags() {
+    jsonFlagsCount.clear();
+    jsonFlagsCount.addAll(List.generate(184, (index) => index + 1));
+  }
 
   Future<QuestionModel> newQuestion() async {
     var flags = await getRandomFlags();

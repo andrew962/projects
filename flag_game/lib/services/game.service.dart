@@ -10,4 +10,8 @@ class GameService {
   void deleteFlagID(int flagID) {
     _flagGameRepository.jsonFlagsCount.remove(flagID);
   }
+
+  void resetGame() {
+    _flagGameRepository.resetFlags();
+  }
 }

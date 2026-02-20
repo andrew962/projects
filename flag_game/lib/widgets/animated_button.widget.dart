@@ -24,7 +24,7 @@ class AnimatedButtonWidget extends ConsumerWidget {
       onPressed: onPressed,
       color: color,
       enabled: enabled,
-      // disabledColor: Colors.grey,
+      disabledColor: color,
       // shadowDegree: ShadowDegree.light,
       // borderRadius: 8,
       duration: 85,

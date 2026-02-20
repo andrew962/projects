@@ -1,20 +1,23 @@
 import 'package:animated_button/animated_button.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:curved_text/curved_text.dart';
+import 'package:flag_game/providers/providers.dart';
 import 'package:flag_game/widgets/animated_button.widget.dart';
-// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  ConsumerState<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends ConsumerState<HomePage> {
   final playerPopUp = AudioPlayer();
 
   @override
@@ -29,15 +32,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   void soundTap() async {
-    // try {
-    //   if (playerPopUp.state != PlayerState.playing) {
-    //     await playerPopUp.play(AssetSource('sounds/pop_up.mp3'));
-    //   }
-    // } catch (e) {
-    //   if (kDebugMode) {
-    //     print('Play sound error $e');
-    //   }
-    // }
+    if (!ref.read(settingsProvider).soundEnabled) return;
+    if (playerPopUp.state != PlayerState.playing) {
+      await playerPopUp.play(AssetSource('sounds/pop_up.mp3'));
+    }
   }
 
   @override
@@ -51,15 +49,31 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Título del juego
-                Text(
-                  'Juego de Banderas',
-                  style: GoogleFonts.bubblerOne(
-                    fontSize: 45,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
+                Stack(
+                  children: [
+                    SvgPicture.asset(
+                      'assets/flag.svg',
+                      fit: BoxFit.fill,
+                      alignment: Alignment.center,
+                      height: 150,
+                    ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 50),
+                        child: CurvedText(
+                          curvature: 0.002,
+                          text: 'Juego de Banderas',
+                          textStyle: GoogleFonts.bubblerOne(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
+
+                // Título del juego
                 const SizedBox(height: 40),
                 // Botón Jugar
                 Row(
@@ -71,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                         color: const Color(0xFF5DA6A7),
                         onPressed: () {
                           soundTap();
-                          context.replace('/new-game');
+                          context.push('/new-game');
                         },
                       ),
                     ),
@@ -87,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                   color: const Color(0xFFB5EAD7),
                   onPressed: () {
                     soundTap();
-                    context.replace('/settings');
+                    context.push('/settings');
                   },
                 ),
 
@@ -102,35 +116,36 @@ class _HomePageState extends State<HomePage> {
                     soundTap();
                     showDialog(
                       context: context,
-                      builder: (context) => AlertDialog(
-                        backgroundColor: const Color(0xFFFFB5B5),
-                        title: Text(
-                          'Desea salir?',
-                          style: GoogleFonts.bubblerOne(
-                            // color: Colors.white,
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        actions: [
-                          AnimatedButton(
-                            width: 50,
-                            height: 50,
-                            onPressed: () {
-                              soundTap();
-                              SystemNavigator.pop();
-                            },
-                            child: Text(
-                              'Si',
+                      builder:
+                          (context) => AlertDialog(
+                            backgroundColor: const Color(0xFFFFB5B5),
+                            title: Text(
+                              'Desea salir?',
                               style: GoogleFonts.bubblerOne(
                                 // color: Colors.white,
-                                fontSize: 20,
+                                fontSize: 25,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            actions: [
+                              AnimatedButton(
+                                width: 50,
+                                height: 50,
+                                onPressed: () {
+                                  soundTap();
+                                  SystemNavigator.pop();
+                                },
+                                child: Text(
+                                  'Si',
+                                  style: GoogleFonts.bubblerOne(
+                                    // color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
                     );
                   },
                 ),

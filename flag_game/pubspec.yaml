@@ -58,6 +58,8 @@ dependencies:
   circular_countdown_timer: ^0.2.4
   google_fonts: ^6.3.2
   audioplayers: ^6.5.1
+  flutter_svg: ^2.2.1
+  curved_text: ^0.2.0
 
 dev_dependencies:
   flutter_test:
@@ -91,6 +93,7 @@ flutter:
       - assets/congrats.json
       - assets/sounds/
       - assets/sounds/pop_up.mp3
+      - assets/flag.svg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

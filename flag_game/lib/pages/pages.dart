@@ -1,3 +1,4 @@
 export 'home_page.dart';
 export 'settings_page.dart';
 export 'game_page.dart';
+export 'results_page.dart';
