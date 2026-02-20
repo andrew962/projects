@@ -4,1105 +4,1289 @@
       "id": 1,
       "country_name": "Peru",
       "image_name": "peru.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/peru.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/peru.png",
+      "country_name_es": "Perú"
     },
     {
       "id": 2,
       "country_name": "Samoa",
       "image_name": "samoa.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/samoa.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/samoa.png",
+      "country_name_es": "Samoa"
     },
     {
       "id": 3,
       "country_name": "Finland",
       "image_name": "finland.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/finland.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/finland.png",
+      "country_name_es": "Finlandia"
     },
     {
       "id": 4,
       "country_name": "Niger",
       "image_name": "niger.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/niger.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/niger.png",
+      "country_name_es": "Níger"
     },
     {
       "id": 5,
       "country_name": "Botswana",
       "image_name": "botswana.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/botswana.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/botswana.png",
+      "country_name_es": "Botsuana"
     },
     {
       "id": 6,
       "country_name": "Switzerland",
       "image_name": "switzerland.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/switzerland.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/switzerland.png",
+      "country_name_es": "Suiza"
     },
     {
       "id": 7,
       "country_name": "Brunei",
       "image_name": "brunei.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/brunei.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/brunei.png",
+      "country_name_es": "Brunéi"
     },
     {
       "id": 8,
       "country_name": "Zambia",
       "image_name": "zambia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/zambia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/zambia.png",
+      "country_name_es": "Zambia"
     },
     {
       "id": 9,
       "country_name": "The Philippines",
       "image_name": "the-philippines.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-philippines.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-philippines.png",
+      "country_name_es": "Filipinas"
     },
     {
       "id": 10,
       "country_name": "Portugal",
       "image_name": "portugal.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/portugal.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/portugal.png",
+      "country_name_es": "Portugal"
     },
     {
       "id": 11,
       "country_name": "The Marshall Islands",
       "image_name": "the-marshall-islands.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-marshall-islands.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-marshall-islands.png",
+      "country_name_es": "Islas Marshall"
     },
     {
       "id": 12,
       "country_name": "Belgium",
       "image_name": "belgium.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/belgium.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/belgium.png",
+      "country_name_es": "Bélgica"
     },
     {
       "id": 13,
       "country_name": "Belarus",
       "image_name": "belarus.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/belarus.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/belarus.png",
+      "country_name_es": "Bielorrusia"
     },
     {
       "id": 14,
       "country_name": "Chad",
       "image_name": "chad.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/chad.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/chad.png",
+      "country_name_es": "Chad"
     },
     {
       "id": 15,
       "country_name": "Palau",
       "image_name": "palau.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/palau.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/palau.png",
+      "country_name_es": "Palaos"
     },
     {
       "id": 16,
       "country_name": "Mongolia",
       "image_name": "mongolia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mongolia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mongolia.png",
+      "country_name_es": "Mongolia"
     },
     {
       "id": 17,
       "country_name": "Papua New Guinea",
       "image_name": "papua-new-guinea.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/papua-new-guinea.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/papua-new-guinea.png",
+      "country_name_es": "Papúa Nueva Guinea"
     },
     {
       "id": 18,
       "country_name": "Fiji",
       "image_name": "fiji.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/fiji.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/fiji.png",
+      "country_name_es": "Fiyi"
     },
     {
       "id": 19,
       "country_name": "Lesotho",
       "image_name": "lesotho.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/lesotho.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/lesotho.png",
+      "country_name_es": "Lesoto"
     },
     {
       "id": 20,
       "country_name": "Singapore",
       "image_name": "singapore.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/singapore.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/singapore.png",
+      "country_name_es": "Singapur"
     },
     {
       "id": 21,
       "country_name": "Central African Republic",
       "image_name": "central-african-republic.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/central-african-republic.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/central-african-republic.png",
+      "country_name_es": "República Centroafricana"
     },
     {
       "id": 22,
       "country_name": "Micronesia",
       "image_name": "micronesia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/micronesia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/micronesia.png",
+      "country_name_es": "Micronesia"
     },
     {
       "id": 23,
       "country_name": "Mauritania",
       "image_name": "mauritania.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mauritania.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mauritania.png",
+      "country_name_es": "Mauritania"
     },
     {
       "id": 24,
       "country_name": "The Gambia",
       "image_name": "the-gambia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-gambia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-gambia.png",
+      "country_name_es": "Gambia"
     },
     {
       "id": 25,
       "country_name": "Armenia",
       "image_name": "armenia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/armenia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/armenia.png",
+      "country_name_es": "Armenia"
     },
     {
       "id": 26,
       "country_name": "North Korea",
       "image_name": "north-korea.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/north-korea.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/north-korea.png",
+      "country_name_es": "Corea del Norte"
     },
     {
       "id": 27,
       "country_name": "Cameroon",
       "image_name": "cameroon.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cameroon.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cameroon.png",
+      "country_name_es": "Camerún"
     },
     {
       "id": 28,
       "country_name": "Russia",
       "image_name": "russia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/russia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/russia.png",
+      "country_name_es": "Rusia"
     },
     {
       "id": 29,
       "country_name": "New Zealand",
       "image_name": "new-zealand.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/new-zealand.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/new-zealand.png",
+      "country_name_es": "Nueva Zelanda"
     },
     {
       "id": 30,
       "country_name": "San Marino",
       "image_name": "san-marino.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/san-marino.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/san-marino.png",
+      "country_name_es": "San Marino"
     },
     {
       "id": 31,
       "country_name": "Hong Kong",
       "image_name": "hong-kong.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/hong-kong.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/hong-kong.png",
+      "country_name_es": "Hong Kong"
     },
     {
       "id": 32,
       "country_name": "Iceland",
       "image_name": "iceland.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/iceland.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/iceland.png",
+      "country_name_es": "Islandia"
     },
     {
       "id": 33,
       "country_name": "Paraguay",
       "image_name": "paraguay.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/paraguay.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/paraguay.png",
+      "country_name_es": "Paraguay"
     },
     {
       "id": 34,
       "country_name": "Bangladesh",
       "image_name": "bangladesh.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bangladesh.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bangladesh.png",
+      "country_name_es": "Bangladés"
     },
     {
       "id": 35,
       "country_name": "Maldives",
       "image_name": "maldives.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/maldives.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/maldives.png",
+      "country_name_es": "Maldivas"
     },
     {
       "id": 36,
       "country_name": "Somalia",
       "image_name": "somalia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/somalia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/somalia.png",
+      "country_name_es": "Somalia"
     },
     {
       "id": 37,
       "country_name": "Liberia",
       "image_name": "liberia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/liberia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/liberia.png",
+      "country_name_es": "Liberia"
     },
     {
       "id": 38,
       "country_name": "Cote D Ivoire",
       "image_name": "cote-d-ivoire.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cote-d-ivoire.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cote-d-ivoire.png",
+      "country_name_es": "Costa de Marfil"
     },
     {
       "id": 39,
       "country_name": "Ukraine",
       "image_name": "ukraine.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ukraine.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ukraine.png",
+      "country_name_es": "Ucrania"
     },
     {
       "id": 40,
       "country_name": "Slovenia",
       "image_name": "slovenia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/slovenia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/slovenia.png",
+      "country_name_es": "Eslovenia"
     },
     {
       "id": 41,
       "country_name": "Uzbekistan",
       "image_name": "uzbekistan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/uzbekistan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/uzbekistan.png",
+      "country_name_es": "Uzbekistán"
     },
     {
       "id": 42,
       "country_name": "Haiti",
       "image_name": "haiti.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/haiti.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/haiti.png",
+      "country_name_es": "Haití"
     },
     {
       "id": 43,
       "country_name": "Qatar",
       "image_name": "qatar.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/qatar.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/qatar.png",
+      "country_name_es": "Catar"
     },
     {
       "id": 44,
       "country_name": "Malta",
       "image_name": "malta.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/malta.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/malta.png",
+      "country_name_es": "Malta"
     },
     {
       "id": 45,
       "country_name": "Moldova",
       "image_name": "moldova.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/moldova.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/moldova.png",
+      "country_name_es": "Moldavia"
     },
     {
       "id": 46,
       "country_name": "Panama",
       "image_name": "panama.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/panama.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/panama.png",
+      "country_name_es": "Panamá"
     },
     {
       "id": 47,
       "country_name": "El Salvador",
       "image_name": "el-salvador.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/el-salvador.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/el-salvador.png",
+      "country_name_es": "El Salvador"
     },
     {
       "id": 48,
       "country_name": "Djibouti",
       "image_name": "djibouti.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/djibouti.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/djibouti.png",
+      "country_name_es": "Yibuti"
     },
     {
       "id": 49,
       "country_name": "Burundi",
       "image_name": "burundi.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/burundi.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/burundi.png",
+      "country_name_es": "Burundi"
     },
     {
       "id": 50,
       "country_name": "Guinea Bissau",
       "image_name": "guinea-bissau.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guinea-bissau.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guinea-bissau.png",
+      "country_name_es": "Guinea-Bisáu"
     },
     {
       "id": 51,
       "country_name": "Dominica",
       "image_name": "dominica.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/dominica.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/dominica.png",
+      "country_name_es": "Dominica"
     },
     {
       "id": 52,
       "country_name": "Germany",
       "image_name": "germany.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/germany.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/germany.png",
+      "country_name_es": "Alemania"
     },
     {
       "id": 53,
       "country_name": "Algeria",
       "image_name": "algeria.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/algeria.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/algeria.png",
+      "country_name_es": "Argelia"
     },
     {
       "id": 54,
       "country_name": "Kyrgyzstan",
       "image_name": "kyrgyzstan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kyrgyzstan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kyrgyzstan.png",
+      "country_name_es": "Kirguistán"
     },
     {
       "id": 55,
       "country_name": "Bhutan",
       "image_name": "bhutan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bhutan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bhutan.png",
+      "country_name_es": "Bután"
     },
     {
       "id": 56,
       "country_name": "Kuwait",
       "image_name": "kuwait.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kuwait.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kuwait.png",
+      "country_name_es": "Kuwait"
     },
     {
       "id": 57,
       "country_name": "Sudan",
       "image_name": "sudan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sudan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sudan.png",
+      "country_name_es": "Sudán"
     },
     {
       "id": 58,
       "country_name": "Caribbean Netherlands",
       "image_name": "caribbean-netherlands.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/caribbean-netherlands.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/caribbean-netherlands.png",
+      "country_name_es": "Países Bajos Caribeños"
     },
     {
       "id": 59,
       "country_name": "Afghanistan",
       "image_name": "afghanistan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/afghanistan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/afghanistan.png",
+      "country_name_es": "Afganistán"
     },
     {
       "id": 60,
       "country_name": "Venezuela",
       "image_name": "venezuela.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/venezuela.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/venezuela.png",
+      "country_name_es": "Venezuela"
     },
     {
       "id": 61,
       "country_name": "Turkmenistan",
       "image_name": "turkmenistan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/turkmenistan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/turkmenistan.png",
+      "country_name_es": "Turkmenistán"
     },
     {
       "id": 62,
       "country_name": "Cape Verde",
       "image_name": "cape-verde.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cape-verde.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cape-verde.png",
+      "country_name_es": "Cabo Verde"
     },
     {
       "id": 63,
       "country_name": "Saint Kitts And Nevis",
       "image_name": "saint-kitts-and-nevis.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saint-kitts-and-nevis.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saint-kitts-and-nevis.png",
+      "country_name_es": "San Cristóbal y Nieves"
     },
     {
       "id": 64,
       "country_name": "Madagascar",
       "image_name": "madagascar.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/madagascar.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/madagascar.png",
+      "country_name_es": "Madagascar"
     },
     {
       "id": 65,
       "country_name": "Vietnam",
       "image_name": "vietnam.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/vietnam.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/vietnam.png",
+      "country_name_es": "Vietnam"
     },
     {
       "id": 66,
       "country_name": "Latvia",
       "image_name": "latvia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/latvia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/latvia.png",
+      "country_name_es": "Letonia"
     },
     {
       "id": 67,
       "country_name": "Tunisia",
       "image_name": "tunisia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tunisia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tunisia.png",
+      "country_name_es": "Túnez"
     },
     {
       "id": 68,
       "country_name": "Ghana",
       "image_name": "ghana.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ghana.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ghana.png",
+      "country_name_es": "Ghana"
     },
     {
       "id": 69,
       "country_name": "Kazakhstan",
       "image_name": "kazakhstan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kazakhstan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kazakhstan.png",
+      "country_name_es": "Kazajistán"
     },
     {
       "id": 70,
       "country_name": "Vanuatu",
       "image_name": "vanuatu.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/vanuatu.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/vanuatu.png",
+      "country_name_es": "Vanuatu"
     },
     {
       "id": 71,
       "country_name": "China",
       "image_name": "china.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/china.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/china.png",
+      "country_name_es": "China"
     },
     {
       "id": 72,
       "country_name": "Chile",
       "image_name": "chile.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/chile.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/chile.png",
+      "country_name_es": "Chile"
     },
     {
       "id": 73,
       "country_name": "Rwanda",
       "image_name": "rwanda.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/rwanda.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/rwanda.png",
+      "country_name_es": "Ruanda"
     },
     {
       "id": 74,
       "country_name": "Montenegro",
       "image_name": "montenegro.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/montenegro.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/montenegro.png",
+      "country_name_es": "Montenegro"
     },
     {
       "id": 75,
       "country_name": "Kenya",
       "image_name": "kenya.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kenya.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kenya.png",
+      "country_name_es": "Kenia"
     },
     {
       "id": 76,
       "country_name": "Nigeria",
       "image_name": "nigeria.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nigeria.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nigeria.png",
+      "country_name_es": "Nigeria"
     },
     {
       "id": 77,
       "country_name": "Tonga",
       "image_name": "tonga.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tonga.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tonga.png",
+      "country_name_es": "Tonga"
     },
     {
       "id": 78,
       "country_name": "Burkina Faso",
       "image_name": "burkina-faso.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/burkina-faso.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/burkina-faso.png",
+      "country_name_es": "Burkina Faso"
     },
     {
       "id": 79,
       "country_name": "Austria",
       "image_name": "austria.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/austria.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/austria.png",
+      "country_name_es": "Austria"
     },
     {
       "id": 80,
       "country_name": "Bolivia",
       "image_name": "bolivia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bolivia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bolivia.png",
+      "country_name_es": "Bolivia"
     },
     {
       "id": 81,
       "country_name": "Guyana",
       "image_name": "guyana.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guyana.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guyana.png",
+      "country_name_es": "Guyana"
     },
     {
       "id": 82,
       "country_name": "Norway",
       "image_name": "norway.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/norway.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/norway.png",
+      "country_name_es": "Noruega"
     },
     {
       "id": 83,
       "country_name": "Laos",
       "image_name": "laos.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/laos.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/laos.png",
+      "country_name_es": "Laos"
     },
     {
       "id": 84,
       "country_name": "Israel",
       "image_name": "israel.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/israel.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/israel.png",
+      "country_name_es": "Israel"
     },
     {
       "id": 85,
       "country_name": "Colombia",
       "image_name": "colombia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/colombia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/colombia.png",
+      "country_name_es": "Colombia"
     },
     {
       "id": 86,
       "country_name": "Eritrea",
       "image_name": "eritrea.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/eritrea.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/eritrea.png",
+      "country_name_es": "Eritrea"
     },
     {
       "id": 87,
       "country_name": "The Seychelles",
       "image_name": "the-seychelles.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-seychelles.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-seychelles.png",
+      "country_name_es": "Seychelles"
     },
     {
       "id": 88,
       "country_name": "Oman",
       "image_name": "oman.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/oman.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/oman.png",
+      "country_name_es": "Omán"
     },
     {
       "id": 89,
       "country_name": "The Bahamas",
       "image_name": "the-bahamas.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-bahamas.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-bahamas.png",
+      "country_name_es": "Bahamas"
     },
     {
       "id": 90,
       "country_name": "Canada",
       "image_name": "canada.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/canada.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/canada.png",
+      "country_name_es": "Canadá"
     },
     {
       "id": 91,
       "country_name": "Jamaica",
       "image_name": "jamaica.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/jamaica.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/jamaica.png",
+      "country_name_es": "Jamaica"
     },
     {
       "id": 92,
       "country_name": "Australia",
       "image_name": "australia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/australia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/australia.png",
+      "country_name_es": "Australia"
     },
     {
       "id": 93,
       "country_name": "Equatorial Guinea",
       "image_name": "equatorial-guinea.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/equatorial-guinea.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/equatorial-guinea.png",
+      "country_name_es": "Guinea Ecuatorial"
     },
     {
       "id": 94,
       "country_name": "Guatemala",
       "image_name": "guatemala.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guatemala.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guatemala.png",
+      "country_name_es": "Guatemala"
     },
     {
       "id": 95,
       "country_name": "Poland",
       "image_name": "poland.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/poland.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/poland.png",
+      "country_name_es": "Polonia"
     },
     {
       "id": 96,
       "country_name": "The Republic Of The Congo",
       "image_name": "the-republic-of-the-congo.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-republic-of-the-congo.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-republic-of-the-congo.png",
+      "country_name_es": "República del Congo"
     },
     {
       "id": 97,
       "country_name": "Yemen",
       "image_name": "yemen.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/yemen.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/yemen.png",
+      "country_name_es": "Yemen"
     },
     {
       "id": 98,
       "country_name": "Uganda",
       "image_name": "uganda.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/uganda.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/uganda.png",
+      "country_name_es": "Uganda"
     },
     {
       "id": 99,
       "country_name": "Liechtenstein",
       "image_name": "liechtenstein.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/liechtenstein.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/liechtenstein.png",
+      "country_name_es": "Liechtenstein"
     },
     {
       "id": 100,
       "country_name": "Ethiopia",
       "image_name": "ethiopia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ethiopia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ethiopia.png",
+      "country_name_es": "Etiopía"
     },
     {
       "id": 101,
       "country_name": "Zimbabwe",
       "image_name": "zimbabwe.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/zimbabwe.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/zimbabwe.png",
+      "country_name_es": "Zimbabue"
     },
     {
       "id": 102,
       "country_name": "France",
       "image_name": "france.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/france.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/france.png",
+      "country_name_es": "Francia"
     },
     {
       "id": 103,
       "country_name": "Morocco",
       "image_name": "morocco.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/morocco.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/morocco.png",
+      "country_name_es": "Marruecos"
     },
     {
       "id": 104,
       "country_name": "Ecuador",
       "image_name": "ecuador.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ecuador.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ecuador.png",
+      "country_name_es": "Ecuador"
     },
     {
       "id": 105,
       "country_name": "Suriname",
       "image_name": "suriname.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/suriname.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/suriname.png",
+      "country_name_es": "Surinam"
     },
     {
       "id": 106,
       "country_name": "Guinea",
       "image_name": "guinea.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guinea.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/guinea.png",
+      "country_name_es": "Guinea"
     },
     {
       "id": 107,
       "country_name": "Sri Lanka",
       "image_name": "sri-lanka.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sri-lanka.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sri-lanka.png",
+      "country_name_es": "Sri Lanka"
     },
     {
       "id": 108,
       "country_name": "Sao Tome And Principe",
       "image_name": "sao-tome-and-principe.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sao-tome-and-principe.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sao-tome-and-principe.png",
+      "country_name_es": "Santo Tomé y Príncipe"
     },
     {
       "id": 109,
       "country_name": "Brazil",
       "image_name": "brazil.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/brazil.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/brazil.png",
+      "country_name_es": "Brasil"
     },
     {
       "id": 110,
       "country_name": "Malaysia",
       "image_name": "malaysia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/malaysia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/malaysia.png",
+      "country_name_es": "Malasia"
     },
     {
       "id": 111,
       "country_name": "Lebanon",
       "image_name": "lebanon.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/lebanon.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/lebanon.png",
+      "country_name_es": "Líbano"
     },
     {
       "id": 112,
       "country_name": "Malawi",
       "image_name": "malawi.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/malawi.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/malawi.png",
+      "country_name_es": "Malaui"
     },
     {
       "id": 113,
       "country_name": "Bosnia And Herzegovina",
       "image_name": "bosnia-and-herzegovina.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bosnia-and-herzegovina.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bosnia-and-herzegovina.png",
+      "country_name_es": "Bosnia y Herzegovina"
     },
     {
       "id": 114,
       "country_name": "Azerbaijan",
       "image_name": "azerbaijan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/azerbaijan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/azerbaijan.png",
+      "country_name_es": "Azerbaiyán"
     },
     {
       "id": 115,
       "country_name": "Myanmar",
       "image_name": "myanmar.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/myanmar.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/myanmar.png",
+      "country_name_es": "Myanmar"
     },
     {
       "id": 116,
       "country_name": "Saudi Arabia",
       "image_name": "saudi-arabia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saudi-arabia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saudi-arabia.png",
+      "country_name_es": "Arabia Saudita"
     },
     {
       "id": 117,
       "country_name": "Honduras",
       "image_name": "honduras.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/honduras.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/honduras.png",
+      "country_name_es": "Honduras"
     },
     {
       "id": 118,
       "country_name": "Mali",
       "image_name": "mali.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mali.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mali.png",
+      "country_name_es": "Malí"
     },
     {
       "id": 119,
       "country_name": "Gabon",
       "image_name": "gabon.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/gabon.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/gabon.png",
+      "country_name_es": "Gabón"
     },
     {
       "id": 120,
       "country_name": "Estonia",
       "image_name": "estonia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/estonia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/estonia.png",
+      "country_name_es": "Estonia"
     },
     {
       "id": 121,
       "country_name": "Albania",
       "image_name": "albania.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/albania.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/albania.png",
+      "country_name_es": "Albania"
     },
     {
       "id": 122,
       "country_name": "Korea",
       "image_name": "korea.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/korea.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/korea.png",
+      "country_name_es": "Corea"
     },
     {
       "id": 123,
       "country_name": "Togo",
       "image_name": "togo.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/togo.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/togo.png",
+      "country_name_es": "Togo"
     },
     {
       "id": 124,
       "country_name": "Saint Lucia",
       "image_name": "saint-lucia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saint-lucia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saint-lucia.png",
+      "country_name_es": "Santa Lucía"
     },
     {
       "id": 125,
       "country_name": "Jordan",
       "image_name": "jordan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/jordan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/jordan.png",
+      "country_name_es": "Jordania"
     },
     {
       "id": 126,
       "country_name": "Mexico",
       "image_name": "mexico.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mexico.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mexico.png",
+      "country_name_es": "México"
     },
     {
       "id": 127,
       "country_name": "Saint Vincent And The Grenadines",
       "image_name": "saint-vincent-and-the-grenadines.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saint-vincent-and-the-grenadines.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/saint-vincent-and-the-grenadines.png",
+      "country_name_es": "San Vicente y las Granadinas"
     },
     {
       "id": 128,
       "country_name": "South Sudan",
       "image_name": "south-sudan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/south-sudan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/south-sudan.png",
+      "country_name_es": "Sudán del Sur"
     },
     {
       "id": 129,
       "country_name": "Tuvalu",
       "image_name": "tuvalu.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tuvalu.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tuvalu.png",
+      "country_name_es": "Tuvalu"
     },
     {
       "id": 130,
       "country_name": "Cuba",
       "image_name": "cuba.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cuba.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cuba.png",
+      "country_name_es": "Cuba"
     },
     {
       "id": 131,
       "country_name": "Thailand",
       "image_name": "thailand.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/thailand.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/thailand.png",
+      "country_name_es": "Tailandia"
     },
     {
       "id": 132,
       "country_name": "Serbia",
       "image_name": "serbia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/serbia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/serbia.png",
+      "country_name_es": "Serbia"
     },
     {
       "id": 133,
       "country_name": "Greece",
       "image_name": "greece.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/greece.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/greece.png",
+      "country_name_es": "Grecia"
     },
     {
       "id": 134,
       "country_name": "India",
       "image_name": "india.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/india.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/india.png",
+      "country_name_es": "India"
     },
     {
       "id": 135,
       "country_name": "Iran",
       "image_name": "iran.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/iran.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/iran.png",
+      "country_name_es": "Irán"
     },
     {
       "id": 136,
       "country_name": "Sweden",
       "image_name": "sweden.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sweden.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sweden.png",
+      "country_name_es": "Suecia"
     },
     {
       "id": 137,
       "country_name": "Nauru",
       "image_name": "nauru.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nauru.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nauru.png",
+      "country_name_es": "Nauru"
     },
     {
       "id": 138,
       "country_name": "Trinidad And Tobago",
       "image_name": "trinidad-and-tobago.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/trinidad-and-tobago.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/trinidad-and-tobago.png",
+      "country_name_es": "Trinidad y Tobago"
     },
     {
       "id": 139,
       "country_name": "Romania",
       "image_name": "romania.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/romania.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/romania.png",
+      "country_name_es": "Rumanía"
     },
     {
       "id": 140,
       "country_name": "Senegal",
       "image_name": "senegal.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/senegal.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/senegal.png",
+      "country_name_es": "Senegal"
     },
     {
       "id": 141,
       "country_name": "The Comoros",
       "image_name": "the-comoros.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-comoros.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-comoros.png",
+      "country_name_es": "Comoras"
     },
     {
       "id": 142,
       "country_name": "Pakistan",
       "image_name": "pakistan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/pakistan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/pakistan.png",
+      "country_name_es": "Pakistán"
     },
     {
       "id": 143,
       "country_name": "South Africa",
       "image_name": "south-africa.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/south-africa.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/south-africa.png",
+      "country_name_es": "Sudáfrica"
     },
     {
       "id": 144,
       "country_name": "Egypt",
       "image_name": "egypt.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/egypt.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/egypt.png",
+      "country_name_es": "Egipto"
     },
     {
       "id": 145,
       "country_name": "Grenada",
       "image_name": "grenada.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/grenada.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/grenada.png",
+      "country_name_es": "Granada"
     },
     {
       "id": 146,
       "country_name": "Antigua And Barbuda",
       "image_name": "antigua-and-barbuda.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/antigua-and-barbuda.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/antigua-and-barbuda.png",
+      "country_name_es": "Antigua y Barbuda"
     },
     {
       "id": 147,
       "country_name": "Nepal",
       "image_name": "nepal.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nepal.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nepal.png",
+      "country_name_es": "Nepal"
     },
     {
       "id": 148,
       "country_name": "Nicaragua",
       "image_name": "nicaragua.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nicaragua.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/nicaragua.png",
+      "country_name_es": "Nicaragua"
     },
     {
       "id": 149,
       "country_name": "Hungary",
       "image_name": "hungary.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/hungary.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/hungary.png",
+      "country_name_es": "Hungría"
     },
     {
       "id": 150,
       "country_name": "Angola",
       "image_name": "angola.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/angola.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/angola.png",
+      "country_name_es": "Angola"
     },
     {
       "id": 151,
       "country_name": "Namibia",
       "image_name": "namibia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/namibia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/namibia.png",
+      "country_name_es": "Namibia"
     },
     {
       "id": 152,
       "country_name": "Bahrain",
       "image_name": "bahrain.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bahrain.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/bahrain.png",
+      "country_name_es": "Baréin"
     },
     {
       "id": 153,
       "country_name": "Mozambique",
       "image_name": "mozambique.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mozambique.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mozambique.png",
+      "country_name_es": "Mozambique"
     },
     {
       "id": 154,
       "country_name": "Sierra Leone",
       "image_name": "sierra-leone.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sierra-leone.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/sierra-leone.png",
+      "country_name_es": "Sierra Leona"
     },
     {
       "id": 155,
       "country_name": "Ireland",
       "image_name": "ireland.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ireland.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/ireland.png",
+      "country_name_es": "Irlanda"
     },
     {
       "id": 156,
       "country_name": "United States",
       "image_name": "united-states.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/united-states.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/united-states.png",
+      "country_name_es": "Estados Unidos"
     },
     {
       "id": 157,
       "country_name": "Andorra",
       "image_name": "andorra.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/andorra.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/andorra.png",
+      "country_name_es": "Andorra"
     },
     {
       "id": 158,
       "country_name": "Kiribati",
       "image_name": "kiribati.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kiribati.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kiribati.png",
+      "country_name_es": "Kiribati"
     },
     {
       "id": 159,
       "country_name": "Denmark",
       "image_name": "denmark.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/denmark.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/denmark.png",
+      "country_name_es": "Dinamarca"
     },
     {
       "id": 160,
       "country_name": "Tanzania",
       "image_name": "tanzania.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tanzania.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tanzania.png",
+      "country_name_es": "Tanzania"
     },
     {
       "id": 161,
       "country_name": "Croatia",
       "image_name": "croatia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/croatia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/croatia.png",
+      "country_name_es": "Croacia"
     },
     {
       "id": 162,
       "country_name": "Georgia",
       "image_name": "georgia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/georgia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/georgia.png",
+      "country_name_es": "Georgia"
     },
     {
       "id": 163,
       "country_name": "Argentina",
       "image_name": "argentina.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/argentina.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/argentina.png",
+      "country_name_es": "Argentina"
     },
     {
       "id": 164,
       "country_name": "Belize",
       "image_name": "belize.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/belize.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/belize.png",
+      "country_name_es": "Belice"
     },
     {
       "id": 165,
       "country_name": "Japan",
       "image_name": "japan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/japan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/japan.png",
+      "country_name_es": "Japón"
     },
     {
       "id": 166,
       "country_name": "Turkey",
       "image_name": "turkey.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/turkey.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/turkey.png",
+      "country_name_es": "Turquía"
     },
     {
       "id": 167,
       "country_name": "Syria",
       "image_name": "syria.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/syria.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/syria.png",
+      "country_name_es": "Siria"
     },
     {
       "id": 168,
       "country_name": "Costa Rica",
       "image_name": "costa-rica.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/costa-rica.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/costa-rica.png",
+      "country_name_es": "Costa Rica"
     },
     {
       "id": 169,
       "country_name": "The United Arab Emirates",
       "image_name": "the-united-arab-emirates.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-united-arab-emirates.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-united-arab-emirates.png",
+      "country_name_es": "Emiratos Árabes Unidos"
     },
     {
       "id": 170,
       "country_name": "Italy",
       "image_name": "italy.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/italy.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/italy.png",
+      "country_name_es": "Italia"
     },
     {
       "id": 171,
       "country_name": "Mauritius",
       "image_name": "mauritius.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mauritius.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/mauritius.png",
+      "country_name_es": "Mauricio"
     },
     {
       "id": 172,
       "country_name": "The Solomon Islands",
       "image_name": "the-solomon-islands.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-solomon-islands.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-solomon-islands.png",
+      "country_name_es": "Islas Salomón"
     },
     {
       "id": 173,
       "country_name": "Cambodia",
       "image_name": "cambodia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cambodia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cambodia.png",
+      "country_name_es": "Camboya"
     },
     {
       "id": 174,
       "country_name": "Slovakia",
       "image_name": "slovakia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/slovakia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/slovakia.png",
+      "country_name_es": "Eslovaquia"
     },
     {
       "id": 175,
       "country_name": "Cyprus",
       "image_name": "cyprus.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cyprus.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/cyprus.png",
+      "country_name_es": "Chipre"
     },
     {
       "id": 176,
       "country_name": "The Vatican City",
       "image_name": "the-vatican-city.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-vatican-city.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/the-vatican-city.png",
+      "country_name_es": "Ciudad del Vaticano"
     },
     {
       "id": 177,
       "country_name": "Libya",
       "image_name": "libya.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/libya.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/libya.png",
+      "country_name_es": "Libia"
     },
     {
       "id": 178,
       "country_name": "Benin",
       "image_name": "benin.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/benin.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/benin.png",
+      "country_name_es": "Benín"
     },
     {
       "id": 179,
       "country_name": "Monaco",
       "image_name": "monaco.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/monaco.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/monaco.png",
+      "country_name_es": "Mónaco"
     },
     {
       "id": 180,
       "country_name": "Barbados",
       "image_name": "barbados.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/barbados.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/barbados.png",
+      "country_name_es": "Barbados"
     },
     {
       "id": 181,
       "country_name": "Indonesia",
       "image_name": "indonesia.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/indonesia.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/indonesia.png",
+      "country_name_es": "Indonesia"
     },
     {
       "id": 182,
       "country_name": "Tajikistan",
       "image_name": "tajikistan.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tajikistan.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/tajikistan.png",
+      "country_name_es": "Tayikistán"
     },
     {
       "id": 183,
       "country_name": "Kosovo",
       "image_name": "kosovo.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kosovo.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/kosovo.png",
+      "country_name_es": "Kosovo"
     },
     {
       "id": 184,
       "country_name": "Spain",
       "image_name": "spain.png",
-      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/spain.png"
+      "url_image": "https://storage.googleapis.com/flagsgame-3459f.appspot.com/flags/spain.png",
+      "country_name_es": "España"
     }
   ]
 }

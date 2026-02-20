@@ -1,5 +1,7 @@
+import 'package:core/l10n/app_localizations.dart';
 import 'package:flag_game/dependecies.dart';
 // import 'package:flag_game/pages/pages.dart';
+import 'package:flag_game/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,13 +28,15 @@ class App extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final appRouter = ref.watch(appRouterProvider);
+    final locale = ref.watch(settingsProvider.select((s) => s.locale));
     return MaterialApp.router(
       title: 'Flag Game',
       routerConfig: appRouter,
       restorationScopeId: 'app',
-      builder: (context, route) => Scaffold(
-        body: SafeArea(child: route!),
-      ),
+      locale: Locale(locale),
+      builder: (context, route) => Scaffold(body: SafeArea(child: route!)),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }

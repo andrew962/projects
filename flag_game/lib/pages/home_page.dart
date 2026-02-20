@@ -1,5 +1,6 @@
 import 'package:animated_button/animated_button.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:core/l10n/app_localizations.dart';
 import 'package:curved_text/curved_text.dart';
 import 'package:flag_game/providers/providers.dart';
 import 'package:flag_game/widgets/animated_button.widget.dart';
@@ -40,6 +41,7 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    AppLocalizations localizations = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: const Color(0xFFEDE0C9), // Fondo pastel claro
       body: SafeArea(
@@ -62,7 +64,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                         padding: const EdgeInsets.symmetric(vertical: 50),
                         child: CurvedText(
                           curvature: 0.002,
-                          text: 'Juego de Banderas',
+                          text: localizations.title_game,
                           textStyle: GoogleFonts.bubblerOne(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
@@ -80,11 +82,10 @@ class _HomePageState extends ConsumerState<HomePage> {
                   children: [
                     Expanded(
                       child: AnimatedButtonWidget(
-                        label: 'Jugar',
+                        label: localizations.play,
                         icon: const Icon(Icons.play_arrow, size: 25),
                         color: const Color(0xFF5DA6A7),
                         onPressed: () {
-                          soundTap();
                           context.push('/new-game');
                         },
                       ),
@@ -94,33 +95,29 @@ class _HomePageState extends ConsumerState<HomePage> {
 
                 const SizedBox(height: 20),
 
-                // Botón Configuraciones
                 AnimatedButtonWidget(
-                  label: 'Configuraciones',
+                  label: localizations.settings,
                   icon: const Icon(Icons.settings, size: 25),
                   color: const Color(0xFFB5EAD7),
                   onPressed: () {
-                    soundTap();
                     context.push('/settings');
                   },
                 ),
 
                 const SizedBox(height: 20),
 
-                // Botón Salir (opcional para Android)
                 AnimatedButtonWidget(
-                  label: 'Salir',
+                  label: localizations.exit,
                   icon: const Icon(Icons.exit_to_app, size: 25),
                   color: const Color(0xFFFFB5B5),
                   onPressed: () {
-                    soundTap();
                     showDialog(
                       context: context,
                       builder:
                           (context) => AlertDialog(
                             backgroundColor: const Color(0xFFFFB5B5),
                             title: Text(
-                              'Desea salir?',
+                              localizations.doYouWantToExit,
                               style: GoogleFonts.bubblerOne(
                                 // color: Colors.white,
                                 fontSize: 25,
@@ -132,11 +129,10 @@ class _HomePageState extends ConsumerState<HomePage> {
                                 width: 50,
                                 height: 50,
                                 onPressed: () {
-                                  soundTap();
                                   SystemNavigator.pop();
                                 },
                                 child: Text(
-                                  'Si',
+                                  localizations.yes,
                                   style: GoogleFonts.bubblerOne(
                                     // color: Colors.white,
                                     fontSize: 20,

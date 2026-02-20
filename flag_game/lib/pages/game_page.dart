@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
+import 'package:core/l10n/app_localizations.dart';
 import 'package:data/data.dart';
 import 'package:flag_game/widgets/animated_button.widget.dart';
 import 'package:flutter/material.dart';
@@ -232,6 +233,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
   @override
   Widget build(BuildContext context) {
     final settings = ref.watch(settingsProvider);
+    final localizations = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: backgroundColor,
       body: SafeArea(
@@ -248,7 +250,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                     onPressed: () => context.pop(),
                   ),
                   Text(
-                    'ADIVINA LA BANDERA',
+                    localizations.guessTheFlag.toUpperCase(),
                     style: GoogleFonts.bubblerOne(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
@@ -283,7 +285,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                     children: [
                       if (settings.showQuestionCounter)
                         Text(
-                          'Pregunta $questionNumber',
+                          localizations.questionN(questionNumber),
                           style: GoogleFonts.bubblerOne(
                             fontSize: 12,
                             color: Colors.white70,
@@ -337,7 +339,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                           ),
                         ),
                       Text(
-                        'Récord: $bestScoreGlobal',
+                        localizations.record(bestScoreGlobal),
                         style: GoogleFonts.bubblerOne(
                           fontSize: 12,
                           color: Colors.white70,
@@ -386,7 +388,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                               color: backgroundColor,
                               child: Center(
                                 child: Text(
-                                  'Tiempo\nFuera',
+                                  localizations.timeout,
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.bubblerOne(
                                     fontSize: 11,
@@ -448,7 +450,11 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                         ),
                         enabled: enabledOptions && !hasTimedOut,
                         color: btnColor,
-                        label: flag.countryName,
+                        label: settings.locale == 'es'
+                            ? (flag.countryNameEs.isNotEmpty
+                                ? flag.countryNameEs
+                                : flag.countryName)
+                            : flag.countryName,
                       ),
                     ],
                   ),
@@ -464,7 +470,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                         child: (isGameOver
                                 ? AnimatedButtonWidget(
                                     onPressed: _goToResults,
-                                    label: 'Ver resultados',
+                                    label: localizations.seeResults,
                                     icon: const Icon(
                                       Icons.emoji_events,
                                       size: 25,
@@ -478,7 +484,7 @@ class _NewGamePageState extends ConsumerState<NewGamePage> {
                                           showNextQuestionButton = false);
                                       _newQuestion();
                                     },
-                                    label: 'Siguiente',
+                                    label: localizations.next,
                                     icon: const Icon(
                                       Icons.arrow_forward_rounded,
                                       size: 25,

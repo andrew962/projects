@@ -1,3 +1,4 @@
+import 'package:core/l10n/app_localizations.dart';
 import 'package:flag_game/widgets/animated_button.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -50,6 +51,7 @@ class ResultsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: const Color(0xFF5DA6A7),
       body: SafeArea(
@@ -70,7 +72,7 @@ class ResultsPage extends StatelessWidget {
                     .fadeIn(duration: 300.ms),
                 const SizedBox(height: 8),
                 Text(
-                  '¡Nuevo Récord!',
+                  localizations.newRecord,
                   style: GoogleFonts.bubblerOne(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -93,7 +95,7 @@ class ResultsPage extends StatelessWidget {
                 const SizedBox(height: 24),
               ],
               Text(
-                'Partida terminada',
+                localizations.gameOver,
                 style: GoogleFonts.bubblerOne(
                   fontSize: 20,
                   color: Colors.white70,
@@ -125,7 +127,7 @@ class ResultsPage extends StatelessWidget {
                         )
                         .fadeIn(duration: 300.ms),
                     Text(
-                      'puntos totales',
+                      localizations.totalPoints,
                       style: GoogleFonts.bubblerOne(
                         fontSize: 16,
                         color: Colors.white70,
@@ -140,21 +142,21 @@ class ResultsPage extends StatelessWidget {
                         _statChip(
                           Icons.check_circle_outline,
                           '$correctAnswers/$totalQuestions',
-                          'aciertos',
+                          localizations.correct,
                           Colors.green[300]!,
                         ),
                         Container(height: 40, width: 1, color: Colors.white24),
                         _statChip(
                           Icons.local_fire_department,
                           'x$maxStreak',
-                          'racha máx.',
+                          localizations.maxStreak,
                           maxStreak >= 5 ? Colors.orange[300]! : Colors.white70,
                         ),
                         Container(height: 40, width: 1, color: Colors.white24),
                         _statChip(
                           Icons.favorite,
                           '$livesRemaining/$totalLives',
-                          'vidas',
+                          localizations.lives,
                           Colors.red[300]!,
                         ),
                       ],
@@ -174,7 +176,7 @@ class ResultsPage extends StatelessWidget {
                             color: Colors.amber, size: 20),
                         const SizedBox(width: 6),
                         Text(
-                          'Récord: $bestScore',
+                          localizations.record(bestScore),
                           style: GoogleFonts.bubblerOne(
                             fontSize: 20,
                             color: Colors.white,
@@ -191,7 +193,7 @@ class ResultsPage extends StatelessWidget {
               const Spacer(),
               AnimatedButtonWidget(
                 onPressed: () => context.go('/new-game'),
-                label: 'Jugar de nuevo',
+                label: localizations.playAgain,
                 color: const Color(0xFFB8E2C8),
               )
                   .animate(delay: 300.ms)
@@ -200,7 +202,7 @@ class ResultsPage extends StatelessWidget {
               const SizedBox(height: 16),
               AnimatedButtonWidget(
                 onPressed: () => context.go('/'),
-                label: 'Menú Principal',
+                label: localizations.mainMenu,
                 color: const Color(0xFFFFB5B5),
               )
                   .animate(delay: 400.ms)

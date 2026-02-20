@@ -1,3 +1,4 @@
+import 'package:core/l10n/app_localizations.dart';
 import 'package:flag_game/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -17,55 +18,57 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
   static const backgroundColor = Color(0xFF5DA6A7);
 
   void _confirmResetScore() {
+    final localizations = AppLocalizations.of(context)!;
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: const Color(0xFFFFB5B5),
-        title: Text(
-          '¿Reiniciar récord?',
-          style: GoogleFonts.bubblerOne(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        content: Text(
-          'El mejor puntaje guardado se borrará.',
-          style: GoogleFonts.bubblerOne(fontSize: 16),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(
-              'Cancelar',
-              style: GoogleFonts.bubblerOne(fontSize: 16),
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              ref.read(settingsProvider.notifier).resetBestScore();
-              Navigator.of(context).pop();
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(
-                    'Récord reiniciado',
-                    style: GoogleFonts.bubblerOne(),
-                  ),
-                  backgroundColor: backgroundColor,
-                  duration: const Duration(seconds: 2),
-                ),
-              );
-            },
-            child: Text(
-              'Reiniciar',
+      builder:
+          (context) => AlertDialog(
+            backgroundColor: const Color(0xFFFFB5B5),
+            title: Text(
+              localizations.resetRecordQuestion,
               style: GoogleFonts.bubblerOne(
-                fontSize: 16,
+                fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.red[800],
               ),
             ),
+            content: Text(
+              localizations.bestScoreWillBeDeleted,
+              style: GoogleFonts.bubblerOne(fontSize: 16),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text(
+                  localizations.cancel,
+                  style: GoogleFonts.bubblerOne(fontSize: 16),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  ref.read(settingsProvider.notifier).resetBestScore();
+                  Navigator.of(context).pop();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        localizations.recordReset,
+                        style: GoogleFonts.bubblerOne(),
+                      ),
+                      backgroundColor: backgroundColor,
+                      duration: const Duration(seconds: 2),
+                    ),
+                  );
+                },
+                child: Text(
+                  localizations.reset,
+                  style: GoogleFonts.bubblerOne(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red[800],
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
     );
   }
 
@@ -73,6 +76,8 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
   Widget build(BuildContext context) {
     final settings = ref.watch(settingsProvider);
     final notifier = ref.read(settingsProvider.notifier);
+
+    AppLocalizations localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: backgroundColor,
@@ -84,7 +89,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
           onPressed: () => context.pop(),
         ),
         title: Text(
-          'CONFIGURACIONES',
+          localizations.settings.toUpperCase(),
           style: GoogleFonts.bubblerOne(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -100,10 +105,11 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             _SectionCard(
               children: [
                 _SettingRow(
-                  icon: settings.soundEnabled
-                      ? Icons.volume_up
-                      : Icons.volume_off,
-                  label: 'Sonido',
+                  icon:
+                      settings.soundEnabled
+                          ? Icons.volume_up
+                          : Icons.volume_off,
+                  label: localizations.sound,
                   trailing: Switch(
                     value: settings.soundEnabled,
                     onChanged: (_) => notifier.toggleSound(),
@@ -119,17 +125,22 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                   padding: const EdgeInsets.only(bottom: 8),
                   child: _SettingRow(
                     icon: Icons.timer,
-                    label: 'Dificultad',
-                    trailing: widget.isGameInProgress
-                        ? const Icon(Icons.lock, color: Colors.white54, size: 18)
-                        : null,
+                    label: localizations.difficulty,
+                    trailing:
+                        widget.isGameInProgress
+                            ? const Icon(
+                              Icons.lock,
+                              color: Colors.white54,
+                              size: 18,
+                            )
+                            : null,
                   ),
                 ),
                 if (widget.isGameInProgress)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Text(
-                      'No disponible durante una partida',
+                      localizations.notAvailableDuringGame,
                       style: GoogleFonts.bubblerOne(
                         fontSize: 13,
                         color: Colors.white54,
@@ -139,35 +150,38 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 Row(
                   children: [
                     _DifficultyButton(
-                      label: 'Fácil',
+                      label: localizations.easy,
                       subtitle: '10s',
                       selected: settings.timerDuration == 10,
                       color: const Color(0xFFB8E2C8),
-                      onTap: widget.isGameInProgress
-                          ? () {}
-                          : () => notifier.setTimerDuration(10),
+                      onTap:
+                          widget.isGameInProgress
+                              ? () {}
+                              : () => notifier.setTimerDuration(10),
                       disabled: widget.isGameInProgress,
                     ),
                     const SizedBox(width: 8),
                     _DifficultyButton(
-                      label: 'Normal',
+                      label: localizations.normal,
                       subtitle: '5s',
                       selected: settings.timerDuration == 5,
                       color: const Color(0xFFFFF1A6),
-                      onTap: widget.isGameInProgress
-                          ? () {}
-                          : () => notifier.setTimerDuration(5),
+                      onTap:
+                          widget.isGameInProgress
+                              ? () {}
+                              : () => notifier.setTimerDuration(5),
                       disabled: widget.isGameInProgress,
                     ),
                     const SizedBox(width: 8),
                     _DifficultyButton(
-                      label: 'Difícil',
+                      label: localizations.hard,
                       subtitle: '3s',
                       selected: settings.timerDuration == 3,
                       color: const Color(0xFFFFB5B5),
-                      onTap: widget.isGameInProgress
-                          ? () {}
-                          : () => notifier.setTimerDuration(3),
+                      onTap:
+                          widget.isGameInProgress
+                              ? () {}
+                              : () => notifier.setTimerDuration(3),
                       disabled: widget.isGameInProgress,
                     ),
                   ],
@@ -179,7 +193,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
               children: [
                 _SettingRow(
                   icon: Icons.format_list_numbered,
-                  label: 'Contador de preguntas',
+                  label: localizations.questionCounter,
                   trailing: Switch(
                     value: settings.showQuestionCounter,
                     onChanged: (_) => notifier.toggleQuestionCounter(),
@@ -191,21 +205,57 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             const SizedBox(height: 16),
             _SectionCard(
               children: [
+                _SettingRow(
+                  icon: Icons.language,
+                  label: localizations.language,
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    _DifficultyButton(
+                      label: 'ES',
+                      subtitle: 'Español',
+                      selected: settings.locale == 'es',
+                      color: const Color(0xFFB8E2C8),
+                      onTap: () => notifier.setLocale('es'),
+                    ),
+                    const SizedBox(width: 8),
+                    _DifficultyButton(
+                      label: 'EN',
+                      subtitle: 'English',
+                      selected: settings.locale == 'en',
+                      color: const Color(0xFFA6C8FF),
+                      onTap: () => notifier.setLocale('en'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            _SectionCard(
+              children: [
                 InkWell(
                   onTap: widget.isGameInProgress ? null : _confirmResetScore,
                   borderRadius: BorderRadius.circular(12),
                   child: _SettingRow(
                     icon: Icons.delete_outline,
-                    label: 'Reiniciar récord',
-                    iconColor: widget.isGameInProgress
-                        ? Colors.white30
-                        : Colors.red[700]!,
-                    labelColor: widget.isGameInProgress
-                        ? Colors.white30
-                        : Colors.red[700]!,
-                    trailing: widget.isGameInProgress
-                        ? const Icon(Icons.lock, color: Colors.white30, size: 18)
-                        : null,
+                    label: localizations.resetRecord,
+                    iconColor:
+                        widget.isGameInProgress
+                            ? Colors.white30
+                            : Colors.red[700]!,
+                    labelColor:
+                        widget.isGameInProgress
+                            ? Colors.white30
+                            : Colors.red[700]!,
+                    trailing:
+                        widget.isGameInProgress
+                            ? const Icon(
+                              Icons.lock,
+                              color: Colors.white30,
+                              size: 18,
+                            )
+                            : null,
                   ),
                 ),
               ],
@@ -302,16 +352,18 @@ class _DifficultyButton extends StatelessWidget {
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 10),
           decoration: BoxDecoration(
-            color: disabled
-                ? Colors.white.withValues(alpha: 0.05)
-                : selected
+            color:
+                disabled
+                    ? Colors.white.withValues(alpha: 0.05)
+                    : selected
                     ? color
                     : color.withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: disabled
-                  ? Colors.transparent
-                  : selected
+              color:
+                  disabled
+                      ? Colors.transparent
+                      : selected
                       ? color
                       : Colors.transparent,
               width: 2,
@@ -324,9 +376,10 @@ class _DifficultyButton extends StatelessWidget {
                 style: GoogleFonts.bubblerOne(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: disabled
-                      ? Colors.white24
-                      : selected
+                  color:
+                      disabled
+                          ? Colors.white24
+                          : selected
                           ? Colors.black87
                           : Colors.white,
                 ),
@@ -335,9 +388,10 @@ class _DifficultyButton extends StatelessWidget {
                 subtitle,
                 style: GoogleFonts.bubblerOne(
                   fontSize: 13,
-                  color: disabled
-                      ? Colors.white24
-                      : selected
+                  color:
+                      disabled
+                          ? Colors.white24
+                          : selected
                           ? Colors.black54
                           : Colors.white60,
                 ),

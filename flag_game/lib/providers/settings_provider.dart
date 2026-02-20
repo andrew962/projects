@@ -5,11 +5,13 @@ class GameSettings {
   final bool soundEnabled;
   final int timerDuration;
   final bool showQuestionCounter;
+  final String locale;
 
   const GameSettings({
     this.soundEnabled = true,
     this.timerDuration = 5,
     this.showQuestionCounter = false,
+    this.locale = 'es',
   });
 
   int get livesCount {
@@ -27,11 +29,13 @@ class GameSettings {
     bool? soundEnabled,
     int? timerDuration,
     bool? showQuestionCounter,
+    String? locale,
   }) =>
       GameSettings(
         soundEnabled: soundEnabled ?? this.soundEnabled,
         timerDuration: timerDuration ?? this.timerDuration,
         showQuestionCounter: showQuestionCounter ?? this.showQuestionCounter,
+        locale: locale ?? this.locale,
       );
 }
 
@@ -46,6 +50,7 @@ class SettingsNotifier extends StateNotifier<GameSettings> {
       soundEnabled: prefs.getBool('soundEnabled') ?? true,
       timerDuration: prefs.getInt('timerDuration') ?? 5,
       showQuestionCounter: prefs.getBool('showQuestionCounter') ?? false,
+      locale: prefs.getString('locale') ?? 'es',
     );
   }
 
@@ -67,6 +72,12 @@ class SettingsNotifier extends StateNotifier<GameSettings> {
     final newValue = !state.showQuestionCounter;
     await prefs.setBool('showQuestionCounter', newValue);
     state = state.copyWith(showQuestionCounter: newValue);
+  }
+
+  Future<void> setLocale(String locale) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('locale', locale);
+    state = state.copyWith(locale: locale);
   }
 
   Future<void> resetBestScore() async {
